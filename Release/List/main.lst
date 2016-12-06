@@ -1,0 +1,926 @@
+##############################################################################
+#                                                                            #
+# IAR ARM ANSI C/C++ Compiler V4.42A/W32 EVALUATION    15/Feb/2011  11:37:23 #
+# Copyright 1999-2005 IAR Systems. All rights reserved.                      #
+#                                                                            #
+#    Cpu mode        =  interwork                                            #
+#    Endian          =  little                                               #
+#    Stack alignment =  4                                                    #
+#    Source file     =  D:\Phone\Elfs\Anoying Alarm\main.cpp                 #
+#    Command line    =  "D:\Phone\Elfs\Anoying Alarm\main.cpp" -D NDEBUG -D  #
+#                       OLDFUNCTIONS -lCN "D:\Phone\Elfs\Anoying             #
+#                       Alarm\Release\List\" -la "D:\Phone\Elfs\Anoying      #
+#                       Alarm\Release\List\" -o "D:\Phone\Elfs\Anoying       #
+#                       Alarm\Release\Obj\" -s9 --no_unroll                  #
+#                       --no_code_motion --cpu_mode arm --endian little      #
+#                       --cpu ARM926EJ-S --stack_align 4 --interwork -e      #
+#                       --enable_multibytes --fpu None --eec++               #
+#                       --dlib_config "D:\Phone\IAR\Embedded Workbench 4.0   #
+#                       Evaluation\ARM\LIB\dl5tpainl8n.h" -I                 #
+#                       "D:\Phone\IAR\Embedded Workbench 4.0                 #
+#                       Evaluation\ARM\INC\" --inline_threshold=2            #
+#    List file       =  D:\Phone\Elfs\Anoying Alarm\Release\List\main.lst    #
+#    Object file     =  D:\Phone\Elfs\Anoying Alarm\Release\Obj\main.r79     #
+#                                                                            #
+#                                                                            #
+##############################################################################
+
+D:\Phone\Elfs\Anoying Alarm\main.cpp
+      1          #include "..\\include\Lib_Clara.h"
+      2          #include "..\\include\Dir.h"
+      3          #include "..\\include\var_arg.h"
+      4          #include "..\\include\cfg_items.h"
+      5          #include "conf_loader.h"
+      6          #include "config_data.h"
+      7          #include "vars.h"
+      8          #include "functions.h"
+      9          #define ELF_BCFG_CONFIG_EVENT 994
+     10          
+
+   \                                 In segment CODE, align 4, keep-with-next
+     11          int TerminateElf(void * ,BOOK* book) {
+   \                     ??TerminateElf:
+   \   00000000   00402DE9           PUSH     {LR}
+   \   00000004   0100A0E1           MOV      R0,R1
+     12            FreeBook(book);
+   \   00000008   2F0100EF           SWI      +303
+     13            return(1);
+   \   0000000C   0100A0E3           MOV      R0,#+1
+   \   00000010   0080BDE8           POP      {PC}             ;; return
+     14          }
+     15          
+     16          typedef struct {
+     17            BOOK * book;
+     18          }MSG;
+     19          
+
+   \                                 In segment CODE, align 4, keep-with-next
+     20          void onTimer(u16 unk,void* data) {
+     21            Timer_ReSet(&timer,1000,onTimer,0);
+   \                     ??onTimer:
+   \   00000000   ........           LDR      R2,??DataTable30  ;; ??onTimer
+   \   00000004   ........           LDR      R0,??DataTable28  ;; timer
+   \   00000008   00402DE9           PUSH     {LR}
+   \   0000000C   0030A0E3           MOV      R3,#+0
+   \   00000010   FA1FA0E3           MOV      R1,#+1000
+   \   00000014   280100EF           SWI      +296
+     22            if (FindBook(isAlarmBook)) {
+   \   00000018   ........           LDR      R0,??DataTable21  ;; ??isAlarmBook
+   \   0000001C   300100EF           SWI      +304
+   \   00000020   000050E3           CMP      R0,#+0
+   \   00000024   0080BD08           POPEQ    {PC}
+     23               Timer_Kill(&timer);
+   \   00000028   ........           LDR      R0,??DataTable28  ;; timer
+   \   0000002C   2A0100EF           SWI      +298
+     24               CreateQuestion();
+   \   00000030   ........           BL       ??CreateQuestion
+     25            }
+     26          }
+   \   00000034   0080BDE8           POP      {PC}             ;; return
+     27          
+
+   \                                 In segment CODE, align 4, keep-with-next
+     28          int onBcfgConfig(void* mess,BOOK* b)
+     29          {
+   \                     ??onBcfgConfig:
+   \   00000000   00402DE9           PUSH     {LR}
+   \   00000004   87DF4DE2           SUB      SP,SP,#+540
+     30            FSTAT _fstat;
+     31            wchar_t path[256];
+     32            
+     33            if(fstat(GetDir(DIR_ELFS|MEM_INTERNAL),L"BcfgEdit.elf",&_fstat)==0)
+   \   00000008   1100A0E3           MOV      R0,#+17
+   \   0000000C   050100EF           SWI      +261
+   \   00000010   C0109FE5           LDR      R1,??onBcfgConfig_1  ;; `?<Constant L"\\x42\\x63\\x66\\x67\\x45\\x64\\x69\\x74\\` + 48
+   \   00000014   802F8DE2           ADD      R2,SP,#+512
+   \   00000018   1C0100EF           SWI      +284
+   \   0000001C   000050E3           CMP      R0,#+0
+   \   00000020   1100001A           BNE      ??onBcfgConfig_2
+     34            {
+     35              wstrcpy(path,GetDir(DIR_ELFS|MEM_INTERNAL));
+   \   00000024   1100A0E3           MOV      R0,#+17
+   \                     ??onBcfgConfig_3:
+   \   00000028   050100EF           SWI      +261
+   \   0000002C   0010A0E1           MOV      R1,R0
+   \   00000030   0D00A0E1           MOV      R0,SP
+   \   00000034   520100EF           SWI      +338
+     36            }
+     37            else if(fstat(GetDir(DIR_ELFS|MEM_EXTERNAL),L"BcfgEdit.elf",&_fstat)==0)
+     38            {
+     39              wstrcpy(path,GetDir(DIR_ELFS|MEM_EXTERNAL));
+     40            }
+     41            else
+     42            {
+     43              MessageBox(0x6FFFFFFF, STR("BcfgEdit.elf not found!"), 0, 1 ,5000, 0);
+     44              return (1);
+     45            }
+     46            wstrcat(path,L"/BcfgEdit.elf");
+   \   00000038   9C109FE5           LDR      R1,??onBcfgConfig_1+0x4  ;; `?<Constant L"\\x42\\x63\\x66\\x67\\x45\\x64\\x69\\x74\\` + 76
+   \   0000003C   0D00A0E1           MOV      R0,SP
+   \   00000040   540100EF           SWI      +340
+     47            elfload(path,(void*)successed_config_path,(void*)successed_config_name,0);
+   \   00000044   ........           LDR      R0,??DataTable24  ;; successed_config_name
+   \   00000048   0030A0E3           MOV      R3,#+0
+   \   0000004C   002090E5           LDR      R2,[R0, #+0]
+   \   00000050   ........           LDR      R0,??DataTable23  ;; successed_config_path
+   \   00000054   001090E5           LDR      R1,[R0, #+0]
+   \   00000058   0D00A0E1           MOV      R0,SP
+   \   0000005C   0D0100EF           SWI      +269
+     48            return (1);
+   \   00000060   0100A0E3           MOV      R0,#+1
+   \   00000064   87DF8DE2           ADD      SP,SP,#+540
+   \   00000068   0080BDE8           POP      {PC}             ;; return
+   \                     ??onBcfgConfig_2:
+   \   0000006C   1000A0E3           MOV      R0,#+16
+   \   00000070   050100EF           SWI      +261
+   \   00000074   5C109FE5           LDR      R1,??onBcfgConfig_1  ;; `?<Constant L"\\x42\\x63\\x66\\x67\\x45\\x64\\x69\\x74\\` + 48
+   \   00000078   802F8DE2           ADD      R2,SP,#+512
+   \   0000007C   1C0100EF           SWI      +284
+   \   00000080   000050E3           CMP      R0,#+0
+   \   00000084   1000A003           MOVEQ    R0,#+16
+   \   00000088   E6FFFF0A           BEQ      ??onBcfgConfig_3
+   \   0000008C   4C009FE5           LDR      R0,??onBcfgConfig_1+0x8  ;; `?<Constant L"\\x42\\x63\\x66\\x67\\x45\\x64\\x69\\x74\\`
+   \   00000090   FF20A0E3           MOV      R2,#+255
+   \   00000094   FF2C82E3           ORR      R2,R2,#0xFF00
+   \   00000098   0010A0E3           MOV      R1,#+0
+   \   0000009C   5D0100EF           SWI      +349
+   \   000000A0   0010A0E3           MOV      R1,#+0
+   \   000000A4   02002DE9           PUSH     {R1}
+   \   000000A8   0130A0E3           MOV      R3,#+1
+   \   000000AC   0020A0E3           MOV      R2,#+0
+   \   000000B0   8810A0E3           MOV      R1,#+136
+   \   000000B4   4C1D81E3           ORR      R1,R1,#0x1300
+   \   000000B8   02002DE9           PUSH     {R1}
+   \   000000BC   0010A0E1           MOV      R1,R0
+   \   000000C0   9004E0E3           MVN      R0,#-1879048192
+   \   000000C4   570200EF           SWI      +599
+   \   000000C8   0100A0E3           MOV      R0,#+1
+   \   000000CC   08D08DE2           ADD      SP,SP,#+8
+   \   000000D0   87DF8DE2           ADD      SP,SP,#+540
+   \   000000D4   0080BDE8           POP      {PC}
+   \                     ??onBcfgConfig_1:
+   \   000000D8   ........           DC32     `?<Constant L"\\x42\\x63\\x66\\x67\\x45\\x64\\x69\\x74\\` + 48
+   \   000000DC   ........           DC32     `?<Constant L"\\x42\\x63\\x66\\x67\\x45\\x64\\x69\\x74\\` + 76
+   \   000000E0   ........           DC32     `?<Constant L"\\x42\\x63\\x66\\x67\\x45\\x64\\x69\\x74\\`
+     49          }
+     50          
+     51          
+
+   \                                 In segment CODE, align 4, keep-with-next
+     52          int ShowAuthorInfo(void *mess ,BOOK* book){
+   \                     ??ShowAuthorInfo:
+   \   00000000   30402DE9           PUSH     {R4,R5,LR}
+     53            MSG * msg = (MSG*)mess;
+     54            MessageBox(EMPTY_SID,STR("Annoying Alarm v0.3b\nby tRaDuZ"), NOIMAGE, 1, 0,msg->book);
+   \   00000004   0010A0E3           MOV      R1,#+0
+   \   00000008   0040A0E1           MOV      R4,R0
+   \   0000000C   38009FE5           LDR      R0,??ShowAuthorInfo_1  ;; `?<Constant L"\\x41\\x6e\\x6e\\x6f\\x79\\x69\\x6e\\x67\\`
+   \   00000010   FF50A0E3           MOV      R5,#+255
+   \   00000014   FF5C85E3           ORR      R5,R5,#0xFF00
+   \   00000018   0520A0E1           MOV      R2,R5
+   \   0000001C   5D0100EF           SWI      +349
+   \   00000020   001094E5           LDR      R1,[R4, #+0]
+   \   00000024   0130A0E3           MOV      R3,#+1
+   \   00000028   02002DE9           PUSH     {R1}
+   \   0000002C   0520A0E1           MOV      R2,R5
+   \   00000030   0010A0E3           MOV      R1,#+0
+   \   00000034   02002DE9           PUSH     {R1}
+   \   00000038   0010A0E1           MOV      R1,R0
+   \   0000003C   9004E0E3           MVN      R0,#-1879048192
+   \   00000040   570200EF           SWI      +599
+     55            return(1);
+   \   00000044   0100A0E3           MOV      R0,#+1
+   \   00000048   3680BDE8           POP      {R1,R2,R4,R5,PC}  ;; return
+   \                     ??ShowAuthorInfo_1:
+   \   0000004C   ........           DC32     `?<Constant L"\\x41\\x6e\\x6e\\x6f\\x79\\x69\\x6e\\x67\\`
+     56          }
+     57          
+
+   \                                 In segment DYN_PAGE, align 4, align-sorted
+     58          const PAGE_MSG HW_PageEvents[]@ "DYN_PAGE" ={
+   \                     HW_PageEvents:
+   \   00000000   E5030000....       DC32 997, ??TerminateElf, 998, ??ShowAuthorInfo, 996, ??ReconfigElf
+   \              ....E6030000
+   \              ........E403
+   \              0000........
+   \   00000018   E2030000....       DC32 994, ??onBcfgConfig, 64, 0H
+   \              ....40000000
+   \              00000000    
+
+   \                                 In segment DATA_I, align 4, align-sorted
+   \   u16 __data timer
+   \                     timer:
+   \   00000000                      DS8 2
+   \   00000002                      REQUIRE `?<Initializer for timer>`
+   \   00000002                      DS8 2
+   \   BOOK_ *__data AABook
+   \                     AABook:
+   \   00000004                      DS8 4
+   \   00000008                      REQUIRE `?<Initializer for AABook>`
+   \   GUI_type *__data teste
+   \                     teste:
+   \   00000008                      DS8 4
+   \   0000000C                      REQUIRE `?<Initializer for teste>`
+   \   int __data contador
+   \                     contador:
+   \   0000000C                      DS8 4
+   \   00000010                      REQUIRE `?<Initializer for contador>`
+     59            ELF_TERMINATE_EVENT , TerminateElf,
+     60            ELF_SHOW_INFO_EVENT  , ShowAuthorInfo,
+     61            ELF_RECONFIG_EVENT,      ReconfigElf,
+     62            ELF_BCFG_CONFIG_EVENT,   onBcfgConfig,
+     63            NIL_EVENT_TAG,0
+     64          };
+     65          
+     66          PAGE_DESC base_page ={"AnnoyingAlarm_BasePage",0,HW_PageEvents};
+   \                     base_page:
+   \   00000010                      DS8 12
+   \   0000001C                      REQUIRE `?<Initializer for base_page>`
+     67          
+     68          
+
+   \                                 In segment CODE, align 4, keep-with-next
+     69          void elf_exit(void){
+   \                     ??elf_exit:
+   \   00000000   00402DE9           PUSH     {LR}
+     70            kill_data(&ELF_BEGIN, (void(*)(void*))mfree_adr());
+   \   00000004   048100EF           SWI      +33028
+   \   00000008   0010A0E1           MOV      R1,R0
+   \   0000000C   04009FE5           LDR      R0,??elf_exit_1  ;; ELF_BEGIN
+   \   00000010   0040BDE8           POP      {LR}             ;; Pop
+   \   00000014   ........           _BF      kill_data,??kill_data??rA  ;; tailcall
+   \                     ??elf_exit_1:
+   \   00000018   ........           DC32     ELF_BEGIN
+     71          }
+     72          
+
+   \                                 In segment CODE, align 4, keep-with-next
+     73          void onCloseAABook(BOOK * book){
+   \                     ??onCloseAABook:
+   \   00000000   00402DE9           PUSH     {LR}
+     74            if (book){
+   \   00000004   000050E3           CMP      R0,#+0
+   \   00000008   0080BD08           POPEQ    {PC}
+     75              Timer_Kill(&timer);
+   \   0000000C   ........           LDR      R0,??DataTable28  ;; timer
+   \   00000010   2A0100EF           SWI      +298
+     76              SUBPROC(elf_exit);
+   \   00000014   ........           LDR      R0,??DataTable27  ;; ??elf_exit
+   \   00000018   080100EF           SWI      +264
+     77            }
+     78          }
+   \   0000001C   0080BDE8           POP      {PC}             ;; return
+
+   \                                 In segment CODE, align 4, keep-with-next
+     79          void loopQuestion() {
+   \                     ??loopQuestion:
+   \   00000000   10402DE9           PUSH     {R4,LR}
+     80            GUIObject_Destroy(teste);
+   \   00000004   ........           LDR      R4,??DataTable28  ;; timer
+   \   00000008   080094E5           LDR      R0,[R4, #+8]
+   \   0000000C   CE0100EF           SWI      +462
+     81            if (contador == NUMBER_OF_QUESTIONS) {
+   \   00000010   ........           LDR      R1,??DataTable20  ;; NUMBER_OF_QUESTIONS
+   \   00000014   0C0094E5           LDR      R0,[R4, #+12]
+   \   00000018   001091E5           LDR      R1,[R1, #+0]
+   \   0000001C   010050E1           CMP      R0,R1
+   \   00000020   1000001A           BNE      ??loopQuestion_1
+     82              if (BCFG_ExitAfterAlarmStops == 0)
+   \   00000024   44009FE5           LDR      R0,??loopQuestion_2  ;; BCFG_ExitAfterAlarmStops
+   \   00000028   000090E5           LDR      R0,[R0, #+0]
+   \   0000002C   000050E3           CMP      R0,#+0
+   \   00000030   0300001A           BNE      ??loopQuestion_3
+     83                FreeBook(AABook);
+   \   00000034   38009FE5           LDR      R0,??loopQuestion_2+0x4  ;; timer + 4
+   \   00000038   000090E5           LDR      R0,[R0, #+0]
+   \   0000003C   2F0100EF           SWI      +303
+   \   00000040   1080BDE8           POP      {R4,PC}
+     84              else {
+     85                contador=0;
+     86                timer=Timer_Set(20000,onTimer,0);
+   \                     ??loopQuestion_3:
+   \   00000044   ........           LDR      R1,??DataTable30  ;; ??onTimer
+   \   00000048   0000A0E3           MOV      R0,#+0
+   \   0000004C   0C0084E5           STR      R0,[R4, #+12]
+   \   00000050   0020A0E3           MOV      R2,#+0
+   \   00000054   2000A0E3           MOV      R0,#+32
+   \   00000058   4E0C80E3           ORR      R0,R0,#0x4E00
+   \   0000005C   290100EF           SWI      +297
+   \   00000060   B000C4E1           STRH     R0,[R4, #+0]
+   \   00000064   1080BDE8           POP      {R4,PC}
+     87              }
+     88            }
+     89            else
+     90              CreateQuestion ();  
+   \                     ??loopQuestion_1:
+   \   00000068   ........           BL       ??CreateQuestion
+     91          }
+   \   0000006C   1080BDE8           POP      {R4,PC}          ;; return
+   \                     ??loopQuestion_2:
+   \   00000070   ........           DC32     BCFG_ExitAfterAlarmStops
+   \   00000074   ........           DC32     timer + 4
+
+   \                                 In segment CODE, align 4, keep-with-next
+     92          bool verifyQuestion(int question , int answer) {
+     93            int answers[0x5] = { BCFG_QuestionFive_RightAnswer, BCFG_QuestionOne_RightAnswer, BCFG_QuestionTwo_RightAnswer ,
+   \                     ??verifyQuestion:
+   \   00000000   54309FE5           LDR      R3,??verifyQuestion_1  ;; BCFG_QuestionFive_RightAnswer
+   \   00000004   14D04DE2           SUB      SP,SP,#+20
+   \   00000008   003093E5           LDR      R3,[R3, #+0]
+     94            BCFG_QuestionThree_RightAnswer , BCFG_QuestionFour_RightAnswer };
+     95            return (answer == answers[question]) ? true : false;  
+   \   0000000C   0D20A0E1           MOV      R2,SP
+   \   00000010   00308DE5           STR      R3,[SP, #+0]
+   \   00000014   44309FE5           LDR      R3,??verifyQuestion_1+0x4  ;; BCFG_QuestionOne_RightAnswer
+   \   00000018   003093E5           LDR      R3,[R3, #+0]
+   \   0000001C   04308DE5           STR      R3,[SP, #+4]
+   \   00000020   3C309FE5           LDR      R3,??verifyQuestion_1+0x8  ;; BCFG_QuestionTwo_RightAnswer
+   \   00000024   003093E5           LDR      R3,[R3, #+0]
+   \   00000028   08308DE5           STR      R3,[SP, #+8]
+   \   0000002C   34309FE5           LDR      R3,??verifyQuestion_1+0xC  ;; BCFG_QuestionThree_RightAnswer
+   \   00000030   003093E5           LDR      R3,[R3, #+0]
+   \   00000034   0C308DE5           STR      R3,[SP, #+12]
+   \   00000038   2C309FE5           LDR      R3,??verifyQuestion_1+0x10  ;; BCFG_QuestionFour_RightAnswer
+   \   0000003C   003093E5           LDR      R3,[R3, #+0]
+   \   00000040   10308DE5           STR      R3,[SP, #+16]
+   \   00000044   000192E7           LDR      R0,[R2, +R0, LSL #+2]
+   \   00000048   14D08DE2           ADD      SP,SP,#+20
+   \   0000004C   000051E1           CMP      R1,R0
+   \   00000050   0100A003           MOVEQ    R0,#+1
+   \   00000054   0000A013           MOVNE    R0,#+0
+   \   00000058   1EFF2FE1           BX       LR               ;; return
+   \                     ??verifyQuestion_1:
+   \   0000005C   ........           DC32     BCFG_QuestionFive_RightAnswer
+   \   00000060   ........           DC32     BCFG_QuestionOne_RightAnswer
+   \   00000064   ........           DC32     BCFG_QuestionTwo_RightAnswer
+   \   00000068   ........           DC32     BCFG_QuestionThree_RightAnswer
+   \   0000006C   ........           DC32     BCFG_QuestionFour_RightAnswer
+     96          }
+
+   \                                 In segment CODE, align 4, keep-with-next
+     97          void Onno ( BOOK * BK ,  void  * ) {
+     98            if (!verifyQuestion(contador%5,1))
+   \                     ??Onno:
+   \   00000000   ........           LDR      R0,??DataTable18  ;; timer + 12
+   \   00000004   ........           LDR      R2,??DataTable17  ;; 0x66666667
+   \   00000008   00402DE9           PUSH     {LR}
+   \   0000000C   000090E5           LDR      R0,[R0, #+0]
+   \   00000010   0110A0E3           MOV      R1,#+1
+   \   00000014   9032CCE0           SMULL    R3,R12,R0,R2
+   \   00000018   0530A0E3           MOV      R3,#+5
+   \   0000001C   CCC0A0E1           ASR      R12,R12,#+1
+   \   00000020   A0CF8CE0           ADD      R12,R12,R0, LSR #+31
+   \   00000024   930C0CE0           MUL      R12,R3,R12
+   \   00000028   0C0040E0           SUB      R0,R0,R12
+   \   0000002C   ........           BL       ??verifyQuestion
+   \   00000030   000050E3           CMP      R0,#+0
+   \   00000034   0300001A           BNE      ??Onno_1
+     99              contador--;
+   \   00000038   ........           LDR      R0,??DataTable19  ;; timer
+   \   0000003C   0C1090E5           LDR      R1,[R0, #+12]
+   \   00000040   011041E2           SUB      R1,R1,#+1
+   \   00000044   0C1080E5           STR      R1,[R0, #+12]
+    100            loopQuestion();
+   \                     ??Onno_1:
+   \   00000048   0040BDE8           POP      {LR}             ;; Pop
+   \   0000004C   ........           B        ??loopQuestion   ;; tailcall
+    101          } 
+    102          
+
+   \                                 In segment CODE, align 4, keep-with-next
+    103          void OnYes ( BOOK * BK ,  void  * ) {
+    104            if (!verifyQuestion(contador%5,0))
+   \                     ??OnYes:
+   \   00000000   ........           LDR      R0,??DataTable18  ;; timer + 12
+   \   00000004   ........           LDR      R2,??DataTable17  ;; 0x66666667
+   \   00000008   00402DE9           PUSH     {LR}
+   \   0000000C   000090E5           LDR      R0,[R0, #+0]
+   \   00000010   0010A0E3           MOV      R1,#+0
+   \   00000014   9032CCE0           SMULL    R3,R12,R0,R2
+   \   00000018   0530A0E3           MOV      R3,#+5
+   \   0000001C   CCC0A0E1           ASR      R12,R12,#+1
+   \   00000020   A0CF8CE0           ADD      R12,R12,R0, LSR #+31
+   \   00000024   930C0CE0           MUL      R12,R3,R12
+   \   00000028   0C0040E0           SUB      R0,R0,R12
+   \   0000002C   ........           BL       ??verifyQuestion
+   \   00000030   000050E3           CMP      R0,#+0
+   \   00000034   0300001A           BNE      ??OnYes_1
+    105              contador--;  
+   \   00000038   ........           LDR      R0,??DataTable19  ;; timer
+   \   0000003C   0C1090E5           LDR      R1,[R0, #+12]
+   \   00000040   011041E2           SUB      R1,R1,#+1
+   \   00000044   0C1080E5           STR      R1,[R0, #+12]
+    106            loopQuestion();
+   \                     ??OnYes_1:
+   \   00000048   0040BDE8           POP      {LR}             ;; Pop
+   \   0000004C   ........           B        ??loopQuestion   ;; tailcall
+    107          }
+    108          
+
+   \                                 In segment CODE, align 4, keep-with-next
+    109          const wchar_t* wakeMsg() {
+    110            const wchar_t* messages[0x5] = { BCFG_QuestionMessages_QuestionFive , BCFG_QuestionMessages_QuestionOne ,
+    111            BCFG_QuestionMessages_QuestionTwo , BCFG_QuestionMessages_QuestionThree , BCFG_QuestionMessages_QuestionFour };
+   \                     ??wakeMsg:
+   \   00000000   48109FE5           LDR      R1,??wakeMsg_1   ;; `?<Constant {BCFG_QuestionMessages_QuestionFive`
+   \   00000004   30002DE9           PUSH     {R4,R5}
+   \   00000008   14D04DE2           SUB      SP,SP,#+20
+   \   0000000C   3C1091E8           LDM      R1,{R2-R5,R12}
+    112            
+    113            return messages[contador%5];
+   \   00000010   ........           LDR      R1,??DataTable17  ;; 0x66666667
+   \   00000014   0D00A0E1           MOV      R0,SP
+   \   00000018   3C1080E8           STM      R0,{R2-R5,R12}
+   \   0000001C   ........           LDR      R0,??DataTable18  ;; timer + 12
+   \   00000020   000090E5           LDR      R0,[R0, #+0]
+   \   00000024   9021C3E0           SMULL    R2,R3,R0,R1
+   \   00000028   0520A0E3           MOV      R2,#+5
+   \   0000002C   C330A0E1           ASR      R3,R3,#+1
+   \   00000030   A03F83E0           ADD      R3,R3,R0, LSR #+31
+   \   00000034   920303E0           MUL      R3,R2,R3
+   \   00000038   0D10A0E1           MOV      R1,SP
+   \   0000003C   030040E0           SUB      R0,R0,R3
+   \   00000040   000191E7           LDR      R0,[R1, +R0, LSL #+2]
+   \   00000044   14D08DE2           ADD      SP,SP,#+20
+   \   00000048   3000BDE8           POP      {R4,R5}
+   \   0000004C   1EFF2FE1           BX       LR               ;; return
+   \                     ??wakeMsg_1:
+   \   00000050   ........           DC32     `?<Constant {BCFG_QuestionMessages_QuestionFive`
+    114          }
+
+   \                                 In segment CODE, align 4, keep-with-next
+    115          void CreateQuestion () {
+   \                     ??CreateQuestion:
+   \   00000000   F0402DE9           PUSH     {R4-R7,LR}
+    116            contador++;
+   \   00000004   ........           LDR      R4,??DataTable19  ;; timer
+   \   00000008   0C0094E5           LDR      R0,[R4, #+12]
+   \   0000000C   010080E2           ADD      R0,R0,#+1
+   \   00000010   0C0084E5           STR      R0,[R4, #+12]
+    117            const wchar_t* on = wakeMsg();
+   \   00000014   ........           BL       ??wakeMsg
+   \   00000018   0060A0E1           MOV      R6,R0
+    118            wchar_t* questionsLeft = new wchar_t[0x15];
+   \   0000001C   2A00A0E3           MOV      R0,#+42
+   \   00000020   ........           _BLF     `??operator new[]`,`??operator new[]??rA`
+    119            snwprintf(questionsLeft,15,L"Question: %d/%d",contador,NUMBER_OF_QUESTIONS);
+   \   00000024   B0209FE5           LDR      R2,??CreateQuestion_1  ;; `?<Constant L"\\x51\\x75\\x65\\x73\\x74\\x69\\x6f\\x6e\\`
+   \   00000028   0050A0E1           MOV      R5,R0
+   \   0000002C   ........           LDR      R0,??DataTable20  ;; NUMBER_OF_QUESTIONS
+   \   00000030   0F10A0E3           MOV      R1,#+15
+   \   00000034   000090E5           LDR      R0,[R0, #+0]
+   \   00000038   01002DE9           PUSH     {R0}
+   \   0000003C   0C3094E5           LDR      R3,[R4, #+12]
+   \   00000040   0500A0E1           MOV      R0,R5
+   \   00000044   150100EF           SWI      +277
+    120            int onID = Str2ID ( on ,  0 ,  41  ) , noID = Str2ID( questionsLeft , 0 , 15 );
+   \   00000048   2920A0E3           MOV      R2,#+41
+   \   0000004C   0010A0E3           MOV      R1,#+0
+   \   00000050   0600A0E1           MOV      R0,R6
+   \   00000054   5D0100EF           SWI      +349
+   \   00000058   0060A0E1           MOV      R6,R0
+   \   0000005C   0F20A0E3           MOV      R2,#+15
+   \   00000060   0010A0E3           MOV      R1,#+0
+   \   00000064   0500A0E1           MOV      R0,R5
+   \   00000068   5D0100EF           SWI      +349
+   \   0000006C   0070A0E1           MOV      R7,R0
+    121            teste = CreateYesNoQuestionVA ( 0 ,
+    122                                       VAR_BOOK ( FindBook(isAlarmBook) ) ,
+    123                                       VAR_YESNO_PRE_QUESTION ( onID ) ,
+    124                                       VAR_YESNO_QUESTION ( noID ) ,
+    125                                       VAR_YESNO_YES_ACTION ( OnYes ) ,
+    126                                       VAR_YESNO_NO_ACTION ( Onno ) , 
+    127                                       0 ) ;
+   \   00000070   ........           LDR      R0,??DataTable21  ;; ??isAlarmBook
+   \   00000074   300100EF           SWI      +304
+   \   00000078   60309FE5           LDR      R3,??CreateQuestion_1+0x4  ;; VAR_ARG_YESNO_PRE_QUESTION
+   \   0000007C   0010A0E3           MOV      R1,#+0
+   \   00000080   02002DE9           PUSH     {R1}
+   \   00000084   58109FE5           LDR      R1,??CreateQuestion_1+0x8  ;; ??Onno
+   \   00000088   0020A0E1           MOV      R2,R0
+   \   0000008C   02002DE9           PUSH     {R1}
+   \   00000090   50109FE5           LDR      R1,??CreateQuestion_1+0xC  ;; VAR_ARG_YESNO_NO_ACTION
+   \   00000094   0000A0E3           MOV      R0,#+0
+   \   00000098   02002DE9           PUSH     {R1}
+   \   0000009C   48109FE5           LDR      R1,??CreateQuestion_1+0x10  ;; ??OnYes
+   \   000000A0   02002DE9           PUSH     {R1}
+   \   000000A4   44109FE5           LDR      R1,??CreateQuestion_1+0x14  ;; VAR_ARG_YESNO_YES_ACTION
+   \   000000A8   02002DE9           PUSH     {R1}
+   \   000000AC   40109FE5           LDR      R1,??CreateQuestion_1+0x18  ;; VAR_ARG_YESNO_QUESTION
+   \   000000B0   80002DE9           PUSH     {R7}
+   \   000000B4   02002DE9           PUSH     {R1}
+   \   000000B8   38109FE5           LDR      R1,??CreateQuestion_1+0x1C  ;; VAR_ARG_BOOK
+   \   000000BC   40002DE9           PUSH     {R6}
+   \   000000C0   A50200EF           SWI      +677
+   \   000000C4   24D08DE2           ADD      SP,SP,#+36
+   \   000000C8   080084E5           STR      R0,[R4, #+8]
+    128            
+    129            GUIObject_Show(teste);
+   \   000000CC   340100EF           SWI      +308
+    130            on = NULL;
+    131            delete questionsLeft;
+   \   000000D0   0500A0E1           MOV      R0,R5
+   \   000000D4   ........           _BLF     `??operator delete`,`??operator delete??rA`
+    132          }
+   \   000000D8   F080BDE8           POP      {R4-R7,PC}       ;; return
+   \                     ??CreateQuestion_1:
+   \   000000DC   ........           DC32     `?<Constant L"\\x51\\x75\\x65\\x73\\x74\\x69\\x6f\\x6e\\`
+   \   000000E0   ........           DC32     VAR_ARG_YESNO_PRE_QUESTION
+   \   000000E4   ........           DC32     ??Onno
+   \   000000E8   ........           DC32     VAR_ARG_YESNO_NO_ACTION
+   \   000000EC   ........           DC32     ??OnYes
+   \   000000F0   ........           DC32     VAR_ARG_YESNO_YES_ACTION
+   \   000000F4   ........           DC32     VAR_ARG_YESNO_QUESTION
+   \   000000F8   ........           DC32     VAR_ARG_BOOK
+
+   \                                 In segment CODE, align 4, keep-with-next
+    133          int isAlarmBook(BOOK * book) {
+    134            if(!strcmp(book->xbook->name,"AlarmBook")) return(1);
+   \                     ??isAlarmBook:
+   \   00000000   20109FE5           LDR      R1,??isAlarmBook_1  ;; `?<Constant "AlarmBook">`
+   \   00000004   00402DE9           PUSH     {LR}
+   \   00000008   000090E5           LDR      R0,[R0, #+0]
+   \   0000000C   040090E5           LDR      R0,[R0, #+4]
+   \   00000010   590100EF           SWI      +345
+   \   00000014   000050E3           CMP      R0,#+0
+   \   00000018   0100A003           MOVEQ    R0,#+1
+   \   0000001C   0080BD08           POPEQ    {PC}
+    135            return(0);
+   \   00000020   0000A0E3           MOV      R0,#+0
+   \   00000024   0080BDE8           POP      {PC}             ;; return
+   \                     ??isAlarmBook_1:
+   \   00000028   ........           DC32     `?<Constant "AlarmBook">`
+    136          }
+
+   \                                 In segment CODE, align 4, keep-with-next
+    137          int myFind (BOOK * book) {
+    138            if (! strcmp (book-> xbook-> name, "Annoying Alarm")) return (1);
+   \                     ??myFind:
+   \   00000000   ........           LDR      R1,??DataTable29  ;; `?<Constant "Annoying Alarm">`
+   \   00000004   00402DE9           PUSH     {LR}
+   \   00000008   000090E5           LDR      R0,[R0, #+0]
+   \   0000000C   040090E5           LDR      R0,[R0, #+4]
+   \   00000010   590100EF           SWI      +345
+   \   00000014   000050E3           CMP      R0,#+0
+   \   00000018   0100A003           MOVEQ    R0,#+1
+   \   0000001C   0080BD08           POPEQ    {PC}
+    139            return (0);
+   \   00000020   0000A0E3           MOV      R0,#+0
+   \   00000024   0080BDE8           POP      {PC}             ;; return
+    140          }
+    141          
+
+   \                                 In segment CODE, align 4, keep-with-next
+    142          static int ReconfigElf(void *mess ,BOOK *book)
+    143          {
+   \                     ??ReconfigElf:
+   \   00000000   30402DE9           PUSH     {R4,R5,LR}
+   \   00000004   0040A0E1           MOV      R4,R0
+    144            RECONFIG_EVENT_DATA *reconf=(RECONFIG_EVENT_DATA *)mess;
+    145            int result=0;
+    146            if (wstrcmpi(reconf->path,successed_config_path)==0 && wstrcmpi(reconf->name,successed_config_name)==0)
+   \   00000008   ........           LDR      R0,??DataTable23  ;; successed_config_path
+   \   0000000C   0050A0E3           MOV      R5,#+0
+   \   00000010   001090E5           LDR      R1,[R0, #+0]
+   \   00000014   0400A0E1           MOV      R0,R4
+   \   00000018   9F0200EF           SWI      +671
+   \   0000001C   000050E3           CMP      R0,#+0
+   \   00000020   0C00001A           BNE      ??ReconfigElf_1
+   \   00000024   ........           LDR      R0,??DataTable24  ;; successed_config_name
+   \   00000028   001090E5           LDR      R1,[R0, #+0]
+   \   0000002C   800084E2           ADD      R0,R4,#+128
+   \   00000030   9F0200EF           SWI      +671
+   \   00000034   000050E3           CMP      R0,#+0
+   \   00000038   0600001A           BNE      ??ReconfigElf_1
+    147            {
+    148              InitConfig();
+   \   0000003C   ........           _BLF     ??InitConfig,??InitConfig??rA
+    149              Timer_ReSet(&timer,1000,onTimer,0);
+   \   00000040   ........           LDR      R2,??DataTable30  ;; ??onTimer
+   \   00000044   ........           LDR      R0,??DataTable28  ;; timer
+   \   00000048   0030A0E3           MOV      R3,#+0
+   \   0000004C   FA1FA0E3           MOV      R1,#+1000
+   \   00000050   280100EF           SWI      +296
+    150              result=1;
+   \   00000054   0150A0E3           MOV      R5,#+1
+    151            }
+    152            return(result);
+   \                     ??ReconfigElf_1:
+   \   00000058   0500A0E1           MOV      R0,R5
+   \   0000005C   3080BDE8           POP      {R4,R5,PC}       ;; return
+    153          }
+    154          
+
+   \                                 In segment CODE, align 4, keep-with-next
+    155          int main (void){
+    156            if (FindBook(myFind)) {
+   \                     main:
+   \   00000000   B0009FE5           LDR      R0,??main_0      ;; ??myFind
+   \   00000004   10402DE9           PUSH     {R4,LR}
+   \   00000008   300100EF           SWI      +304
+   \   0000000C   000050E3           CMP      R0,#+0
+   \   00000010   1200000A           BEQ      ??main_1
+    157              MessageBox(EMPTY_SID,STR("Annoying Alarm is runing!"), NOIMAGE, 1, 0,0);
+   \   00000014   A0009FE5           LDR      R0,??main_0+0x4  ;; `?<Constant "Annoying Alarm">` + 16
+   \   00000018   FF40A0E3           MOV      R4,#+255
+   \   0000001C   FF4C84E3           ORR      R4,R4,#0xFF00
+   \   00000020   0420A0E1           MOV      R2,R4
+   \   00000024   0010A0E3           MOV      R1,#+0
+   \   00000028   5D0100EF           SWI      +349
+   \   0000002C   0010A0E3           MOV      R1,#+0
+   \   00000030   02002DE9           PUSH     {R1}
+   \   00000034   02002DE9           PUSH     {R1}
+   \   00000038   0130A0E3           MOV      R3,#+1
+   \   0000003C   0420A0E1           MOV      R2,R4
+   \   00000040   0010A0E1           MOV      R1,R0
+   \   00000044   9004E0E3           MVN      R0,#-1879048192
+   \   00000048   570200EF           SWI      +599
+    158              SUBPROC(elf_exit);
+   \   0000004C   ........           LDR      R0,??DataTable27  ;; ??elf_exit
+   \   00000050   080100EF           SWI      +264
+   \   00000054   08D08DE2           ADD      SP,SP,#+8
+   \   00000058   0000A0E3           MOV      R0,#+0
+   \   0000005C   1080BDE8           POP      {R4,PC}
+    159            }
+    160            else {
+    161              InitConfig();
+    162              AABook = new BOOK ;
+   \                     ??main_1:
+   \   00000060   ........           LDR      R4,??DataTable28  ;; timer
+   \   00000064   ........           _BLF     ??InitConfig,??InitConfig??rA
+   \   00000068   1800A0E3           MOV      R0,#+24
+   \   0000006C   ........           _BLF     `??operator new`,`??operator new??rA`
+    163              CreateBook ( AABook,onCloseAABook,&base_page , "Annoying Alarm" , - 1 , 0 ) ;
+   \   00000070   ........           LDR      R3,??DataTable29  ;; `?<Constant "Annoying Alarm">`
+   \   00000074   44109FE5           LDR      R1,??main_0+0x8  ;; ??onCloseAABook
+   \   00000078   040084E5           STR      R0,[R4, #+4]
+   \   0000007C   0000A0E3           MOV      R0,#+0
+   \   00000080   01002DE9           PUSH     {R0}
+   \   00000084   102084E2           ADD      R2,R4,#+16
+   \   00000088   0000E0E1           MVN      R0,R0
+   \   0000008C   01002DE9           PUSH     {R0}
+   \   00000090   040094E5           LDR      R0,[R4, #+4]
+   \   00000094   2B0100EF           SWI      +299
+    164              timer=Timer_Set(1000,onTimer,0);
+   \   00000098   ........           LDR      R1,??DataTable30  ;; ??onTimer
+   \   0000009C   0020A0E3           MOV      R2,#+0
+   \   000000A0   FA0FA0E3           MOV      R0,#+1000
+   \   000000A4   290100EF           SWI      +297
+   \   000000A8   B000C4E1           STRH     R0,[R4, #+0]
+   \   000000AC   08D08DE2           ADD      SP,SP,#+8
+    165            }
+    166            return(0);
+   \   000000B0   0000A0E3           MOV      R0,#+0
+   \   000000B4   1080BDE8           POP      {R4,PC}          ;; return
+   \                     ??main_0:
+   \   000000B8   ........           DC32     ??myFind
+   \   000000BC   ........           DC32     `?<Constant "Annoying Alarm">` + 16
+   \   000000C0   ........           DC32     ??onCloseAABook
+    167          }
+
+   \                                 In segment CODE, align 4, keep-with-next
+   \                     ??DataTable17:
+   \   00000000   67666666           DC32     0x66666667
+
+   \                                 In segment CODE, align 4, keep-with-next
+   \                     ??DataTable18:
+   \   00000000   ........           DC32     timer + 12
+
+   \                                 In segment CODE, align 4, keep-with-next
+   \                     ??DataTable19:
+   \   00000000   ........           DC32     timer
+
+   \                                 In segment CODE, align 4, keep-with-next
+   \                     ??DataTable20:
+   \   00000000   ........           DC32     NUMBER_OF_QUESTIONS
+
+   \                                 In segment CODE, align 4, keep-with-next
+   \                     ??DataTable21:
+   \   00000000   ........           DC32     ??isAlarmBook
+
+   \                                 In segment CODE, align 4, keep-with-next
+   \                     ??DataTable23:
+   \   00000000   ........           DC32     successed_config_path
+
+   \                                 In segment CODE, align 4, keep-with-next
+   \                     ??DataTable24:
+   \   00000000   ........           DC32     successed_config_name
+
+   \                                 In segment CODE, align 4, keep-with-next
+   \                     ??DataTable27:
+   \   00000000   ........           DC32     ??elf_exit
+
+   \                                 In segment CODE, align 4, keep-with-next
+   \                     ??DataTable28:
+   \   00000000   ........           DC32     timer
+
+   \                                 In segment CODE, align 4, keep-with-next
+   \                     ??DataTable29:
+   \   00000000   ........           DC32     `?<Constant "Annoying Alarm">`
+
+   \                                 In segment CODE, align 4, keep-with-next
+   \                     ??DataTable30:
+   \   00000000   ........           DC32     ??onTimer
+
+   \                                 In segment DATA_ID, align 4, align-sorted
+   \                     `?<Initializer for timer>`:
+   \   00000000   0000               DC8 0, 0
+   \   00000002   0000               DC8 0, 0
+   \                     `?<Initializer for AABook>`:
+   \   00000004   00000000           DC8 0, 0, 0, 0
+   \                     `?<Initializer for teste>`:
+   \   00000008   00000000           DC8 0, 0, 0, 0
+   \                     `?<Initializer for contador>`:
+   \   0000000C   00000000           DC8 0, 0, 0, 0
+   \                     `?<Initializer for base_page>`:
+   \   00000010   ........0000       DC32 `?<Constant "AnnoyingAlarm_BasePage">`, 0H, HW_PageEvents
+   \              0000........
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant "AnnoyingAlarm_BasePage">`:
+   \   00000000   416E6E6F7969       DC8 "AnnoyingAlarm_BasePage"
+   \              6E67416C6172
+   \              6D5F42617365
+   \              5061676500  
+   \   00000017   00                 DC8 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x42\\x63\\x66\\x67\\x45\\x64\\x69\\x74\\`:
+   \   00000000   420063006600       DC8 42H, 0, 63H, 0, 66H, 0, 67H, 0
+   \              6700        
+   \   00000008   450064006900       DC8 45H, 0, 64H, 0, 69H, 0, 74H, 0
+   \              7400        
+   \   00000010   2E0065006C00       DC8 2EH, 0, 65H, 0, 6CH, 0, 66H, 0
+   \              6600        
+   \   00000018   20006E006F00       DC8 20H, 0, 6EH, 0, 6FH, 0, 74H, 0
+   \              7400        
+   \   00000020   200066006F00       DC8 20H, 0, 66H, 0, 6FH, 0, 75H, 0
+   \              7500        
+   \   00000028   6E0064002100       DC8 6EH, 0, 64H, 0, 21H, 0, 0, 0
+   \              0000        
+   \   00000030   420063006600       DC8 42H, 0, 63H, 0, 66H, 0, 67H, 0
+   \              6700        
+   \   00000038   450064006900       DC8 45H, 0, 64H, 0, 69H, 0, 74H, 0
+   \              7400        
+   \   00000040   2E0065006C00       DC8 2EH, 0, 65H, 0, 6CH, 0, 66H, 0
+   \              6600        
+   \   00000048   0000               DC8 0, 0
+   \   0000004A   0000               DC8 0, 0
+   \   0000004C   2F0042006300       DC8 2FH, 0, 42H, 0, 63H, 0, 66H, 0
+   \              6600        
+   \   00000054   670045006400       DC8 67H, 0, 45H, 0, 64H, 0, 69H, 0
+   \              6900        
+   \   0000005C   74002E006500       DC8 74H, 0, 2EH, 0, 65H, 0, 6CH, 0
+   \              6C00        
+   \   00000064   66000000           DC8 66H, 0, 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x41\\x6e\\x6e\\x6f\\x79\\x69\\x6e\\x67\\`:
+   \   00000000   41006E006E00       DC8 41H, 0, 6EH, 0, 6EH, 0, 6FH, 0
+   \              6F00        
+   \   00000008   790069006E00       DC8 79H, 0, 69H, 0, 6EH, 0, 67H, 0
+   \              6700        
+   \   00000010   200041006C00       DC8 20H, 0, 41H, 0, 6CH, 0, 61H, 0
+   \              6100        
+   \   00000018   72006D002000       DC8 72H, 0, 6DH, 0, 20H, 0, 76H, 0
+   \              7600        
+   \   00000020   30002E003300       DC8 30H, 0, 2EH, 0, 33H, 0, 62H, 0
+   \              6200        
+   \   00000028   0A0062007900       DC8 0AH, 0, 62H, 0, 79H, 0, 20H, 0
+   \              2000        
+   \   00000030   740052006100       DC8 74H, 0, 52H, 0, 61H, 0, 44H, 0
+   \              4400        
+   \   00000038   75005A000000       DC8 75H, 0, 5AH, 0, 0, 0
+   \   0000003E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant {BCFG_QuestionMessages_QuestionFive`:
+   \   00000000   ........           DC32 BCFG_QuestionMessages_QuestionFive
+   \   00000004   ........           DC32 BCFG_QuestionMessages_QuestionOne
+   \   00000008   ........           DC32 BCFG_QuestionMessages_QuestionTwo
+   \   0000000C   ........           DC32 BCFG_QuestionMessages_QuestionThree
+   \   00000010   ........           DC32 BCFG_QuestionMessages_QuestionFour
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x51\\x75\\x65\\x73\\x74\\x69\\x6f\\x6e\\`:
+   \   00000000   510075006500       DC8 51H, 0, 75H, 0, 65H, 0, 73H, 0
+   \              7300        
+   \   00000008   740069006F00       DC8 74H, 0, 69H, 0, 6FH, 0, 6EH, 0
+   \              6E00        
+   \   00000010   3A0020002500       DC8 3AH, 0, 20H, 0, 25H, 0, 64H, 0
+   \              6400        
+   \   00000018   2F0025006400       DC8 2FH, 0, 25H, 0, 64H, 0, 0, 0
+   \              0000        
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant "AlarmBook">`:
+   \   00000000   416C61726D42       DC8 "AlarmBook"
+   \              6F6F6B00    
+   \   0000000A   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant "Annoying Alarm">`:
+   \   00000000   416E6E6F7969       DC8 "Annoying Alarm"
+   \              6E6720416C61
+   \              726D00      
+   \   0000000F   00                 DC8 0
+   \   00000010   41006E006E00       DC8 41H, 0, 6EH, 0, 6EH, 0, 6FH, 0
+   \              6F00        
+   \   00000018   790069006E00       DC8 79H, 0, 69H, 0, 6EH, 0, 67H, 0
+   \              6700        
+   \   00000020   200041006C00       DC8 20H, 0, 41H, 0, 6CH, 0, 61H, 0
+   \              6100        
+   \   00000028   72006D002000       DC8 72H, 0, 6DH, 0, 20H, 0, 69H, 0
+   \              6900        
+   \   00000030   730020007200       DC8 73H, 0, 20H, 0, 72H, 0, 75H, 0
+   \              7500        
+   \   00000038   6E0069006E00       DC8 6EH, 0, 69H, 0, 6EH, 0, 67H, 0
+   \              6700        
+   \   00000040   21000000           DC8 21H, 0, 0, 0
+
+   Maximum stack usage in bytes:
+
+     Function                       CSTACK
+     --------                       ------
+     CreateQuestion()                  56
+     OnYes(BOOK_ *, void *)             4
+     Onno(BOOK_ *, void *)              4
+     ReconfigElf(void *, BOOK_ *)      12
+     ShowAuthorInfo(void *, BOOK_ *)
+                                       20
+     TerminateElf(void *, BOOK_ *)      4
+     elf_exit()                         4
+     isAlarmBook(BOOK_ *)               4
+     loopQuestion()                     8
+     main()                            16
+     myFind(BOOK_ *)                    4
+     onBcfgConfig(void *, BOOK_ *)    552
+     onCloseAABook(BOOK_ *)             4
+     onTimer(u16, void *)               4
+     verifyQuestion(int, int)          20
+     wakeMsg()                         28
+
+
+   Segment part sizes:
+
+     Function/Label                 Bytes
+     --------------                 -----
+     TerminateElf(void *, BOOK_ *)    20
+     onTimer(u16, void *)             56
+     onBcfgConfig(void *, BOOK_ *)   228
+     ShowAuthorInfo(void *, BOOK_ *)
+                                      80
+     HW_PageEvents                    40
+     timer                            28
+     elf_exit()                       28
+     onCloseAABook(BOOK_ *)           32
+     loopQuestion()                  120
+     verifyQuestion(int, int)        112
+     Onno(BOOK_ *, void *)            80
+     OnYes(BOOK_ *, void *)           80
+     wakeMsg()                        84
+     CreateQuestion()                252
+     isAlarmBook(BOOK_ *)             44
+     myFind(BOOK_ *)                  40
+     ReconfigElf(void *, BOOK_ *)     96
+     main()                          196
+     ??DataTable17                     4
+     ??DataTable18                     4
+     ??DataTable19                     4
+     ??DataTable20                     4
+     ??DataTable21                     4
+     ??DataTable23                     4
+     ??DataTable24                     4
+     ??DataTable27                     4
+     ??DataTable28                     4
+     ??DataTable29                     4
+     ??DataTable30                     4
+     ?<Initializer for timer>         28
+     ?<Constant "AnnoyingAlarm_BasePage">
+                                      24
+     ?<Constant L"\x42\x63\x66\x67\x45\x64\x69\x74\
+                                     104
+     ?<Constant L"\x41\x6e\x6e\x6f\x79\x69\x6e\x67\
+                                      64
+     ?<Constant {BCFG_QuestionMessages_QuestionFive
+                                      20
+     ?<Constant L"\x51\x75\x65\x73\x74\x69\x6f\x6e\
+                                      32
+     ?<Constant "AlarmBook">          12
+     ?<Constant "Annoying Alarm">     68
+      Others                         136
+
+ 
+ 1 716 bytes in segment CODE
+   324 bytes in segment DATA_C
+    28 bytes in segment DATA_I
+    28 bytes in segment DATA_ID
+    40 bytes in segment DYN_PAGE
+    12 bytes in segment INITTAB
+ 
+ 1 592 bytes of CODE  memory (+ 136 bytes shared)
+   392 bytes of CONST memory
+    28 bytes of DATA  memory
+
+Errors: none
+Warnings: none

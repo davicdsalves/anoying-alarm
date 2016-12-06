@@ -1,0 +1,387 @@
+//////////////////////////////////////////////////////////////////////////////
+//                                                                           /
+// IAR ARM ANSI C/C++ Compiler V4.42A/W32 EVALUATION   15/Feb/2011  11:19:39 /
+// Copyright 1999-2005 IAR Systems. All rights reserved.                     /
+//                                                                           /
+//    Cpu mode        =  interwork                                           /
+//    Endian          =  little                                              /
+//    Stack alignment =  4                                                   /
+//    Source file     =  D:\Phone\Elfs\Anoying Alarm\config_data.c           /
+//    Command line    =  "D:\Phone\Elfs\Anoying Alarm\config_data.c" -lCN    /
+//                       "D:\Phone\Elfs\Anoying Alarm\Release\List\" -la     /
+//                       "D:\Phone\Elfs\Anoying Alarm\Release\List\" -o      /
+//                       "D:\Phone\Elfs\Anoying Alarm\Release\Obj\" -s9      /
+//                       --no_unroll --no_code_motion --cpu_mode arm         /
+//                       --endian little --cpu ARM926EJ-S --stack_align 4    /
+//                       --interwork -e --enable_multibytes --fpu None       /
+//                       --eec++ --dlib_config "D:\Phone\IAR\Embedded        /
+//                       Workbench 4.0 Evaluation\ARM\LIB\dl5tpainl8n.h"     /
+//                       --segment code=CONFIG --segment data=CONFIG -I      /
+//                       "D:\Phone\IAR\Embedded Workbench 4.0                /
+//                       Evaluation\ARM\INC\" --inline_threshold=2           /
+//    List file       =  D:\Phone\Elfs\Anoying Alarm\Release\List\config_dat /
+//                       a.s79                                               /
+//                                                                           /
+//                                                                           /
+//////////////////////////////////////////////////////////////////////////////
+
+        NAME config_data
+
+        RTMODEL "StackAlign4", "USED"
+        RTMODEL "__cpu_mode", "__pcs__interwork"
+        RTMODEL "__data_model", "absolute"
+        RTMODEL "__endian", "little"
+        RTMODEL "__rt_version", "6"
+
+        RSEG CSTACK:DATA:NOROOT(2)
+
+        PUBLIC BCFG_ExitAfterAlarmStops
+        PUBLIC BCFG_QuestionFive_RightAnswer
+        PUBLIC BCFG_QuestionFour_RightAnswer
+        PUBLIC BCFG_QuestionMessages_QuestionFive
+        PUBLIC BCFG_QuestionMessages_QuestionFour
+        PUBLIC BCFG_QuestionMessages_QuestionOne
+        PUBLIC BCFG_QuestionMessages_QuestionThree
+        PUBLIC BCFG_QuestionMessages_QuestionTwo
+        PUBLIC BCFG_QuestionOne_RightAnswer
+        PUBLIC BCFG_QuestionThree_RightAnswer
+        PUBLIC BCFG_QuestionTwo_RightAnswer
+        PUBLIC NUMBER_OF_QUESTIONS
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 1
+        DC8 "Number of Questions"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 100
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+NUMBER_OF_QUESTIONS:
+        DATA
+        DC32 5
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 9
+        DC8 "Question Messages"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 1, 0
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 9
+        DC8 "Question One"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 1, 0
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 18
+        DC8 "Message"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 40
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+BCFG_QuestionMessages_QuestionOne:
+        DATA
+        DC8 57H, 0, 61H, 0, 6BH, 0, 65H, 0
+        DC8 20H, 0, 75H, 0, 70H, 0, 3FH, 0
+        DC8 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 5
+        DC8 "Right Answer"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 2
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+BCFG_QuestionOne_RightAnswer:
+        DATA
+        DC32 0
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC8 "Yes"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 "No"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 9
+        DC8 ""
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 0
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 9
+        DC8 "Question Two"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 1, 0
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 18
+        DC8 "Message"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 40
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+BCFG_QuestionMessages_QuestionTwo:
+        DATA
+        DC8 52H, 0, 65H, 0, 61H, 0, 6CH, 0
+        DC8 6CH, 0, 79H, 0, 3FH, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 5
+        DC8 "Right Answer"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 2
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+BCFG_QuestionTwo_RightAnswer:
+        DATA
+        DC32 0
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC8 "Yes"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 "No"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 9
+        DC8 ""
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 0
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 9
+        DC8 "Question Three"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 1, 0
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 18
+        DC8 "Message"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 40
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+BCFG_QuestionMessages_QuestionThree:
+        DATA
+        DC8 4FH, 0, 6EH, 0, 65H, 0, 20H, 0
+        DC8 6DH, 0, 6FH, 0, 72H, 0, 65H, 0
+        DC8 20H, 0, 74H, 0, 72H, 0, 79H, 0
+        DC8 3FH, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 5
+        DC8 "Right Answer"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 2
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+BCFG_QuestionThree_RightAnswer:
+        DATA
+        DC32 0
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC8 "Yes"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 "No"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 9
+        DC8 ""
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 0
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 9
+        DC8 "Question Four"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 1, 0
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 18
+        DC8 "Message"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 40
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+BCFG_QuestionMessages_QuestionFour:
+        DATA
+        DC8 49H, 0, 74H, 0, 73H, 0, 20H, 0
+        DC8 74H, 0, 69H, 0, 6DH, 0, 65H, 0
+        DC8 20H, 0, 74H, 0, 6FH, 0, 20H, 0
+        DC8 77H, 0, 61H, 0, 6BH, 0, 65H, 0
+        DC8 2CH, 0, 20H, 0, 6EH, 0, 6FH, 0
+        DC8 77H, 0, 20H, 0, 67H, 0, 65H, 0
+        DC8 74H, 0, 20H, 0, 6FH, 0, 75H, 0
+        DC8 74H, 0, 20H, 0, 6FH, 0, 66H, 0
+        DC8 20H, 0, 62H, 0, 65H, 0, 64H, 0
+        DC8 21H, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 5
+        DC8 "Right Answer"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 2
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+BCFG_QuestionFour_RightAnswer:
+        DATA
+        DC32 0
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC8 "Yes"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 "No"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 9
+        DC8 ""
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 0
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 9
+        DC8 "Question Five"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 1, 0
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 18
+        DC8 "Message"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 40
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+BCFG_QuestionMessages_QuestionFive:
+        DATA
+        DC8 59H, 0, 6FH, 0, 75H, 0, 20H, 0
+        DC8 61H, 0, 73H, 0, 6BH, 0, 65H, 0
+        DC8 64H, 0, 20H, 0, 66H, 0, 6FH, 0
+        DC8 72H, 0, 20H, 0, 74H, 0, 68H, 0
+        DC8 69H, 0, 73H, 0, 2CH, 0, 20H, 0
+        DC8 6EH, 0, 6FH, 0, 77H, 0, 20H, 0
+        DC8 47H, 0, 45H, 0, 54H, 0, 20H, 0
+        DC8 55H, 0, 50H, 0, 21H, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 5
+        DC8 "Right Answer"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 2
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+BCFG_QuestionFive_RightAnswer:
+        DATA
+        DC32 0
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC8 "Yes"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 "No"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 9
+        DC8 ""
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 0
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 9
+        DC8 ""
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 0
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 5
+        DC8 "Exit after alarm stops?"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 2
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+BCFG_ExitAfterAlarmStops:
+        DATA
+        DC32 0
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC8 "Yes"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 "No"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+
+        END
+// 
+// 1 888 bytes in segment CONFIG_C
+// 
+// 1 888 bytes of CONST memory
+//
+//Errors: none
+//Warnings: none

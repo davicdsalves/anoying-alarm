@@ -1,0 +1,660 @@
+##############################################################################
+#                                                                            #
+# IAR ARM ANSI C/C++ Compiler V4.42A/W32 EVALUATION    15/Feb/2011  11:19:39 #
+# Copyright 1999-2005 IAR Systems. All rights reserved.                      #
+#                                                                            #
+#    Cpu mode        =  interwork                                            #
+#    Endian          =  little                                               #
+#    Stack alignment =  4                                                    #
+#    Source file     =  D:\Phone\Elfs\Anoying Alarm\config_data.c            #
+#    Command line    =  "D:\Phone\Elfs\Anoying Alarm\config_data.c" -lCN     #
+#                       "D:\Phone\Elfs\Anoying Alarm\Release\List\" -la      #
+#                       "D:\Phone\Elfs\Anoying Alarm\Release\List\" -o       #
+#                       "D:\Phone\Elfs\Anoying Alarm\Release\Obj\" -s9       #
+#                       --no_unroll --no_code_motion --cpu_mode arm          #
+#                       --endian little --cpu ARM926EJ-S --stack_align 4     #
+#                       --interwork -e --enable_multibytes --fpu None        #
+#                       --eec++ --dlib_config "D:\Phone\IAR\Embedded         #
+#                       Workbench 4.0 Evaluation\ARM\LIB\dl5tpainl8n.h"      #
+#                       --segment code=CONFIG --segment data=CONFIG -I       #
+#                       "D:\Phone\IAR\Embedded Workbench 4.0                 #
+#                       Evaluation\ARM\INC\" --inline_threshold=2            #
+#    List file       =  D:\Phone\Elfs\Anoying Alarm\Release\List\config_data #
+#                       .lst                                                 #
+#    Object file     =  D:\Phone\Elfs\Anoying Alarm\Release\Obj\config_data. #
+#                       r79                                                  #
+#                                                                            #
+#                                                                            #
+##############################################################################
+
+D:\Phone\Elfs\Anoying Alarm\config_data.c
+      1          #include "..\\include\cfg_items.h"
+      2          #include "config_data.h"
+      3          
+      4          #pragma diag_suppress = Pe177
+      5          
+
+   \                                 In segment CONFIG_C, align 4, align-sorted, root
+   \   00000000   01000000           DC32 1
+   \   00000004   4E756D626572       DC8 "Number of Questions"
+   \              206F66205175
+   \              657374696F6E
+   \              7300        
+   \   00000018   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \   00000024   000000006400       DC32 0, 100
+   \              0000        
+      6          __root const CFG_HDR cfghdr1 = { CFG_UINT , "Number of Questions" , 0 , 100};
+
+   \                                 In segment CONFIG_C, align 4, align-sorted, root
+      7          __root const unsigned int NUMBER_OF_QUESTIONS = 5; // Default
+   \                     NUMBER_OF_QUESTIONS:
+   \   00000000   05000000           DC32 5
+      8          
+
+   \                                 In segment CONFIG_C, align 4, align-sorted, root
+   \   00000000   09000000           DC32 9
+   \   00000004   517565737469       DC8 "Question Messages"
+   \              6F6E204D6573
+   \              736167657300
+   \   00000016   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              0000        
+   \   00000024   010000000000       DC32 1, 0
+   \              0000        
+      9          __root const CFG_HDR cfghdr2 = { CFG_LEVEL ,"Question Messages" , 1 , 0}; // arg3 = Begin Level >>>LevelName=;
+
+   \                                 In segment CONFIG_C, align 4, align-sorted, root
+   \   00000000   09000000           DC32 9
+   \   00000004   517565737469       DC8 "Question One"
+   \              6F6E204F6E65
+   \              00          
+   \   00000011   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              000000000000
+   \              00          
+   \   00000024   010000000000       DC32 1, 0
+   \              0000        
+     10          	__root const CFG_HDR cfghdr3 = { CFG_LEVEL ,"Question One" , 1 , 0}; // arg3 = Begin Level >>>LevelName=QuestionOne;
+
+   \                                 In segment CONFIG_C, align 4, align-sorted, root
+   \   00000000   12000000           DC32 18
+   \   00000004   4D6573736167       DC8 "Message"
+   \              6500        
+   \   0000000C   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              00000000    
+   \   0000001C   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0
+   \              0000        
+   \   00000024   000000002800       DC32 0, 40
+   \              0000        
+     11          		__root const CFG_HDR cfghdr4 = { CFG_UTF16_STRING , "Message" , 0 , 40};
+
+   \                                 In segment CONFIG_C, align 4, align-sorted, root
+     12          		__root const wchar_t BCFG_QuestionMessages_QuestionOne[41] = L"Wake up?"; // Default. 
+   \                     BCFG_QuestionMessages_QuestionOne:
+   \   00000000   570061006B00       DC8 57H, 0, 61H, 0, 6BH, 0, 65H, 0
+   \              6500        
+   \   00000008   200075007000       DC8 20H, 0, 75H, 0, 70H, 0, 3FH, 0
+   \              3F00        
+   \   00000010   0000               DC8 0, 0
+   \   00000012   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              00000000    
+   \   00000022   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              00000000    
+   \   00000032   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              00000000    
+   \   00000042   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              000000000000
+     13          
+
+   \                                 In segment CONFIG_C, align 4, align-sorted, root
+   \   00000000   05000000           DC32 5
+   \   00000004   526967687420       DC8 "Right Answer"
+   \              416E73776572
+   \              00          
+   \   00000011   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              000000000000
+   \              00          
+   \   00000024   000000000200       DC32 0, 2
+   \              0000        
+     14          		__root const CFG_HDR cfghdr5 = { CFG_CBOX , "Right Answer" , 0 , 2 }; 
+
+   \                                 In segment CONFIG_C, align 4, align-sorted, root
+     15          		__root const int BCFG_QuestionOne_RightAnswer = 0; // Default item (Yes).
+   \                     BCFG_QuestionOne_RightAnswer:
+   \   00000000   00000000           DC32 0
+
+   \                                 In segment CONFIG_C, align 4, align-sorted, root
+   \   00000000   59657300           DC8 "Yes"
+   \   00000004   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              00000000    
+   \   00000014   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \   00000020   4E6F00             DC8 "No"
+   \   00000023   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              00000000    
+   \   00000033   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              00          
+     16          		__root const CFG_CBOX_ITEM cfgRadioBtn5[2] = {"Yes" , "No"};
+
+   \                                 In segment CONFIG_C, align 4, align-sorted, root
+   \   00000000   09000000           DC32 9
+   \   00000004   00                 DC8 ""
+   \   00000005   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              00000000    
+   \   00000015   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              000000      
+   \   00000024   000000000000       DC32 0, 0
+   \              0000        
+     17          	__root const CFG_HDR cfghdr7 = {CFG_LEVEL , "" , 0 , 0 }; // arg3 = End Level
+     18          
+
+   \                                 In segment CONFIG_C, align 4, align-sorted, root
+   \   00000000   09000000           DC32 9
+   \   00000004   517565737469       DC8 "Question Two"
+   \              6F6E2054776F
+   \              00          
+   \   00000011   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              000000000000
+   \              00          
+   \   00000024   010000000000       DC32 1, 0
+   \              0000        
+     19          	__root const CFG_HDR cfghdr6 = { CFG_LEVEL ,"Question Two" , 1 , 0}; // arg3 = Begin Level >>>LevelName=QuestionTwo;
+
+   \                                 In segment CONFIG_C, align 4, align-sorted, root
+   \   00000000   12000000           DC32 18
+   \   00000004   4D6573736167       DC8 "Message"
+   \              6500        
+   \   0000000C   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              00000000    
+   \   0000001C   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0
+   \              0000        
+   \   00000024   000000002800       DC32 0, 40
+   \              0000        
+     20          		__root const CFG_HDR cfghdr8 = { CFG_UTF16_STRING , "Message" , 0 , 40};
+
+   \                                 In segment CONFIG_C, align 4, align-sorted, root
+     21          		__root const wchar_t BCFG_QuestionMessages_QuestionTwo[41] = L"Really?"; // Default. 
+   \                     BCFG_QuestionMessages_QuestionTwo:
+   \   00000000   520065006100       DC8 52H, 0, 65H, 0, 61H, 0, 6CH, 0
+   \              6C00        
+   \   00000008   6C0079003F00       DC8 6CH, 0, 79H, 0, 3FH, 0, 0, 0
+   \              0000        
+   \   00000010   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              00000000    
+   \   00000020   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              00000000    
+   \   00000030   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              00000000    
+   \   00000040   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              000000000000
+   \              0000        
+     22          
+
+   \                                 In segment CONFIG_C, align 4, align-sorted, root
+   \   00000000   05000000           DC32 5
+   \   00000004   526967687420       DC8 "Right Answer"
+   \              416E73776572
+   \              00          
+   \   00000011   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              000000000000
+   \              00          
+   \   00000024   000000000200       DC32 0, 2
+   \              0000        
+     23          		__root const CFG_HDR cfghdr9 = { CFG_CBOX , "Right Answer" , 0 , 2 }; 
+
+   \                                 In segment CONFIG_C, align 4, align-sorted, root
+     24          		__root const int BCFG_QuestionTwo_RightAnswer = 0; // Default item (Yes).
+   \                     BCFG_QuestionTwo_RightAnswer:
+   \   00000000   00000000           DC32 0
+
+   \                                 In segment CONFIG_C, align 4, align-sorted, root
+   \   00000000   59657300           DC8 "Yes"
+   \   00000004   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              00000000    
+   \   00000014   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \   00000020   4E6F00             DC8 "No"
+   \   00000023   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              00000000    
+   \   00000033   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              00          
+     25          		__root const CFG_CBOX_ITEM cfgRadioBtn9[2] = {"Yes" , "No"};
+
+   \                                 In segment CONFIG_C, align 4, align-sorted, root
+   \   00000000   09000000           DC32 9
+   \   00000004   00                 DC8 ""
+   \   00000005   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              00000000    
+   \   00000015   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              000000      
+   \   00000024   000000000000       DC32 0, 0
+   \              0000        
+     26          	__root const CFG_HDR cfghdr11 = {CFG_LEVEL , "" , 0 , 0 }; // arg3 = End Level
+     27          
+
+   \                                 In segment CONFIG_C, align 4, align-sorted, root
+   \   00000000   09000000           DC32 9
+   \   00000004   517565737469       DC8 "Question Three"
+   \              6F6E20546872
+   \              656500      
+   \   00000013   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              0000000000  
+   \   00000024   010000000000       DC32 1, 0
+   \              0000        
+     28          	__root const CFG_HDR cfghdr10 = { CFG_LEVEL ,"Question Three" , 1 , 0}; // arg3 = Begin Level >>>LevelName=QuestionThree;
+
+   \                                 In segment CONFIG_C, align 4, align-sorted, root
+   \   00000000   12000000           DC32 18
+   \   00000004   4D6573736167       DC8 "Message"
+   \              6500        
+   \   0000000C   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              00000000    
+   \   0000001C   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0
+   \              0000        
+   \   00000024   000000002800       DC32 0, 40
+   \              0000        
+     29          		__root const CFG_HDR cfghdr12 = { CFG_UTF16_STRING , "Message" , 0 , 40};
+
+   \                                 In segment CONFIG_C, align 4, align-sorted, root
+     30          		__root const wchar_t BCFG_QuestionMessages_QuestionThree[41] = L"One more try?"; // Default. 
+   \                     BCFG_QuestionMessages_QuestionThree:
+   \   00000000   4F006E006500       DC8 4FH, 0, 6EH, 0, 65H, 0, 20H, 0
+   \              2000        
+   \   00000008   6D006F007200       DC8 6DH, 0, 6FH, 0, 72H, 0, 65H, 0
+   \              6500        
+   \   00000010   200074007200       DC8 20H, 0, 74H, 0, 72H, 0, 79H, 0
+   \              7900        
+   \   00000018   3F000000           DC8 3FH, 0, 0, 0
+   \   0000001C   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              00000000    
+   \   0000002C   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              00000000    
+   \   0000003C   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              00000000    
+   \   0000004C   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0
+   \              0000        
+     31          
+
+   \                                 In segment CONFIG_C, align 4, align-sorted, root
+   \   00000000   05000000           DC32 5
+   \   00000004   526967687420       DC8 "Right Answer"
+   \              416E73776572
+   \              00          
+   \   00000011   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              000000000000
+   \              00          
+   \   00000024   000000000200       DC32 0, 2
+   \              0000        
+     32          		__root const CFG_HDR cfghdr13 = { CFG_CBOX , "Right Answer" , 0 , 2 }; 
+
+   \                                 In segment CONFIG_C, align 4, align-sorted, root
+     33          		__root const int BCFG_QuestionThree_RightAnswer = 0; // Default item (Yes).
+   \                     BCFG_QuestionThree_RightAnswer:
+   \   00000000   00000000           DC32 0
+
+   \                                 In segment CONFIG_C, align 4, align-sorted, root
+   \   00000000   59657300           DC8 "Yes"
+   \   00000004   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              00000000    
+   \   00000014   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \   00000020   4E6F00             DC8 "No"
+   \   00000023   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              00000000    
+   \   00000033   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              00          
+     34          		__root const CFG_CBOX_ITEM cfgRadioBtn13[2] = {"Yes" , "No"};
+     35          		
+
+   \                                 In segment CONFIG_C, align 4, align-sorted, root
+   \   00000000   09000000           DC32 9
+   \   00000004   00                 DC8 ""
+   \   00000005   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              00000000    
+   \   00000015   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              000000      
+   \   00000024   000000000000       DC32 0, 0
+   \              0000        
+     36          	__root const CFG_HDR cfghdr15 = {CFG_LEVEL , "" , 0 , 0 }; // arg3 = End Level
+     37          
+
+   \                                 In segment CONFIG_C, align 4, align-sorted, root
+   \   00000000   09000000           DC32 9
+   \   00000004   517565737469       DC8 "Question Four"
+   \              6F6E20466F75
+   \              7200        
+   \   00000012   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              000000000000
+   \   00000024   010000000000       DC32 1, 0
+   \              0000        
+     38          	__root const CFG_HDR cfghdr14 = { CFG_LEVEL ,"Question Four" , 1 , 0}; // arg3 = Begin Level >>>LevelName=QuestionFour;
+
+   \                                 In segment CONFIG_C, align 4, align-sorted, root
+   \   00000000   12000000           DC32 18
+   \   00000004   4D6573736167       DC8 "Message"
+   \              6500        
+   \   0000000C   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              00000000    
+   \   0000001C   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0
+   \              0000        
+   \   00000024   000000002800       DC32 0, 40
+   \              0000        
+     39          		__root const CFG_HDR cfghdr16 = { CFG_UTF16_STRING , "Message" , 0 , 40};
+
+   \                                 In segment CONFIG_C, align 4, align-sorted, root
+     40          		__root const wchar_t BCFG_QuestionMessages_QuestionFour[41] = L"Its time to wake, now get out of bed!"; // Default. 
+   \                     BCFG_QuestionMessages_QuestionFour:
+   \   00000000   490074007300       DC8 49H, 0, 74H, 0, 73H, 0, 20H, 0
+   \              2000        
+   \   00000008   740069006D00       DC8 74H, 0, 69H, 0, 6DH, 0, 65H, 0
+   \              6500        
+   \   00000010   200074006F00       DC8 20H, 0, 74H, 0, 6FH, 0, 20H, 0
+   \              2000        
+   \   00000018   770061006B00       DC8 77H, 0, 61H, 0, 6BH, 0, 65H, 0
+   \              6500        
+   \   00000020   2C0020006E00       DC8 2CH, 0, 20H, 0, 6EH, 0, 6FH, 0
+   \              6F00        
+   \   00000028   770020006700       DC8 77H, 0, 20H, 0, 67H, 0, 65H, 0
+   \              6500        
+   \   00000030   740020006F00       DC8 74H, 0, 20H, 0, 6FH, 0, 75H, 0
+   \              7500        
+   \   00000038   740020006F00       DC8 74H, 0, 20H, 0, 6FH, 0, 66H, 0
+   \              6600        
+   \   00000040   200062006500       DC8 20H, 0, 62H, 0, 65H, 0, 64H, 0
+   \              6400        
+   \   00000048   21000000           DC8 21H, 0, 0, 0
+   \   0000004C   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0
+   \              0000        
+     41          
+
+   \                                 In segment CONFIG_C, align 4, align-sorted, root
+   \   00000000   05000000           DC32 5
+   \   00000004   526967687420       DC8 "Right Answer"
+   \              416E73776572
+   \              00          
+   \   00000011   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              000000000000
+   \              00          
+   \   00000024   000000000200       DC32 0, 2
+   \              0000        
+     42          		__root const CFG_HDR cfghdr17 = { CFG_CBOX , "Right Answer" , 0 , 2 }; 
+
+   \                                 In segment CONFIG_C, align 4, align-sorted, root
+     43          		__root const int BCFG_QuestionFour_RightAnswer = 0; // Default item (Yes).
+   \                     BCFG_QuestionFour_RightAnswer:
+   \   00000000   00000000           DC32 0
+
+   \                                 In segment CONFIG_C, align 4, align-sorted, root
+   \   00000000   59657300           DC8 "Yes"
+   \   00000004   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              00000000    
+   \   00000014   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \   00000020   4E6F00             DC8 "No"
+   \   00000023   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              00000000    
+   \   00000033   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              00          
+     44          		__root const CFG_CBOX_ITEM cfgRadioBtn17[2] = {"Yes" , "No"};
+
+   \                                 In segment CONFIG_C, align 4, align-sorted, root
+   \   00000000   09000000           DC32 9
+   \   00000004   00                 DC8 ""
+   \   00000005   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              00000000    
+   \   00000015   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              000000      
+   \   00000024   000000000000       DC32 0, 0
+   \              0000        
+     45          	__root const CFG_HDR cfghdr19 = {CFG_LEVEL , "" , 0 , 0 }; // arg3 = End Level
+     46          
+
+   \                                 In segment CONFIG_C, align 4, align-sorted, root
+   \   00000000   09000000           DC32 9
+   \   00000004   517565737469       DC8 "Question Five"
+   \              6F6E20466976
+   \              6500        
+   \   00000012   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              000000000000
+   \   00000024   010000000000       DC32 1, 0
+   \              0000        
+     47          	__root const CFG_HDR cfghdr18 = { CFG_LEVEL ,"Question Five" , 1 , 0}; // arg3 = Begin Level >>>LevelName=QuestionFive;
+
+   \                                 In segment CONFIG_C, align 4, align-sorted, root
+   \   00000000   12000000           DC32 18
+   \   00000004   4D6573736167       DC8 "Message"
+   \              6500        
+   \   0000000C   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              00000000    
+   \   0000001C   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0
+   \              0000        
+   \   00000024   000000002800       DC32 0, 40
+   \              0000        
+     48          		__root const CFG_HDR cfghdr20 = { CFG_UTF16_STRING , "Message" , 0 , 40};
+
+   \                                 In segment CONFIG_C, align 4, align-sorted, root
+     49          		__root const wchar_t BCFG_QuestionMessages_QuestionFive[41] = L"You asked for this, now GET UP!"; // Default. 
+   \                     BCFG_QuestionMessages_QuestionFive:
+   \   00000000   59006F007500       DC8 59H, 0, 6FH, 0, 75H, 0, 20H, 0
+   \              2000        
+   \   00000008   610073006B00       DC8 61H, 0, 73H, 0, 6BH, 0, 65H, 0
+   \              6500        
+   \   00000010   640020006600       DC8 64H, 0, 20H, 0, 66H, 0, 6FH, 0
+   \              6F00        
+   \   00000018   720020007400       DC8 72H, 0, 20H, 0, 74H, 0, 68H, 0
+   \              6800        
+   \   00000020   690073002C00       DC8 69H, 0, 73H, 0, 2CH, 0, 20H, 0
+   \              2000        
+   \   00000028   6E006F007700       DC8 6EH, 0, 6FH, 0, 77H, 0, 20H, 0
+   \              2000        
+   \   00000030   470045005400       DC8 47H, 0, 45H, 0, 54H, 0, 20H, 0
+   \              2000        
+   \   00000038   550050002100       DC8 55H, 0, 50H, 0, 21H, 0, 0, 0
+   \              0000        
+   \   00000040   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              000000000000
+   \              0000        
+     50          
+
+   \                                 In segment CONFIG_C, align 4, align-sorted, root
+   \   00000000   05000000           DC32 5
+   \   00000004   526967687420       DC8 "Right Answer"
+   \              416E73776572
+   \              00          
+   \   00000011   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              000000000000
+   \              00          
+   \   00000024   000000000200       DC32 0, 2
+   \              0000        
+     51          		__root const CFG_HDR cfghdr21 = { CFG_CBOX , "Right Answer" , 0 , 2 }; 
+
+   \                                 In segment CONFIG_C, align 4, align-sorted, root
+     52          		__root const int BCFG_QuestionFive_RightAnswer = 0; // Default item (Yes).
+   \                     BCFG_QuestionFive_RightAnswer:
+   \   00000000   00000000           DC32 0
+
+   \                                 In segment CONFIG_C, align 4, align-sorted, root
+   \   00000000   59657300           DC8 "Yes"
+   \   00000004   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              00000000    
+   \   00000014   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \   00000020   4E6F00             DC8 "No"
+   \   00000023   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              00000000    
+   \   00000033   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              00          
+     53          		__root const CFG_CBOX_ITEM cfgRadioBtn21[2] = {"Yes" , "No"};
+
+   \                                 In segment CONFIG_C, align 4, align-sorted, root
+   \   00000000   09000000           DC32 9
+   \   00000004   00                 DC8 ""
+   \   00000005   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              00000000    
+   \   00000015   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              000000      
+   \   00000024   000000000000       DC32 0, 0
+   \              0000        
+     54          	__root const CFG_HDR cfghdr23 = {CFG_LEVEL , "" , 0 , 0 }; // arg3 = End Level
+     55                  
+
+   \                                 In segment CONFIG_C, align 4, align-sorted, root
+   \   00000000   09000000           DC32 9
+   \   00000004   00                 DC8 ""
+   \   00000005   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              00000000    
+   \   00000015   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              000000      
+   \   00000024   000000000000       DC32 0, 0
+   \              0000        
+     56          __root const CFG_HDR cfghdr24 = {CFG_LEVEL , "" , 0 , 0 }; // arg3 = End Level
+     57          
+
+   \                                 In segment CONFIG_C, align 4, align-sorted, root
+   \   00000000   05000000           DC32 5
+   \   00000004   457869742061       DC8 "Exit after alarm stops?"
+   \              667465722061
+   \              6C61726D2073
+   \              746F70733F00
+   \   0000001C   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0
+   \              0000        
+   \   00000024   000000000200       DC32 0, 2
+   \              0000        
+     58          __root const CFG_HDR cfghdr22 = { CFG_CBOX , "Exit after alarm stops?" , 0 , 2 }; 
+
+   \                                 In segment CONFIG_C, align 4, align-sorted, root
+     59          __root const int BCFG_ExitAfterAlarmStops = 0; // Default item (Yes).
+   \                     BCFG_ExitAfterAlarmStops:
+   \   00000000   00000000           DC32 0
+
+   \                                 In segment CONFIG_C, align 4, align-sorted, root
+   \   00000000   59657300           DC8 "Yes"
+   \   00000004   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              00000000    
+   \   00000014   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \   00000020   4E6F00             DC8 "No"
+   \   00000023   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              00000000    
+   \   00000033   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              00          
+     60          __root const CFG_CBOX_ITEM cfgRadioBtn22[2] = {"Yes" , "No"};
+     61          
+
+
+   Segment part sizes:
+
+     Function/Label                 Bytes
+     --------------                 -----
+     cfghdr1                          44
+     NUMBER_OF_QUESTIONS               4
+     cfghdr2                          44
+     cfghdr3                          44
+     cfghdr4                          44
+     BCFG_QuestionMessages_QuestionOne
+                                      84
+     cfghdr5                          44
+     BCFG_QuestionOne_RightAnswer      4
+     cfgRadioBtn5                     64
+     cfghdr7                          44
+     cfghdr6                          44
+     cfghdr8                          44
+     BCFG_QuestionMessages_QuestionTwo
+                                      84
+     cfghdr9                          44
+     BCFG_QuestionTwo_RightAnswer      4
+     cfgRadioBtn9                     64
+     cfghdr11                         44
+     cfghdr10                         44
+     cfghdr12                         44
+     BCFG_QuestionMessages_QuestionThree
+                                      84
+     cfghdr13                         44
+     BCFG_QuestionThree_RightAnswer    4
+     cfgRadioBtn13                    64
+     cfghdr15                         44
+     cfghdr14                         44
+     cfghdr16                         44
+     BCFG_QuestionMessages_QuestionFour
+                                      84
+     cfghdr17                         44
+     BCFG_QuestionFour_RightAnswer     4
+     cfgRadioBtn17                    64
+     cfghdr19                         44
+     cfghdr18                         44
+     cfghdr20                         44
+     BCFG_QuestionMessages_QuestionFive
+                                      84
+     cfghdr21                         44
+     BCFG_QuestionFive_RightAnswer     4
+     cfgRadioBtn21                    64
+     cfghdr23                         44
+     cfghdr24                         44
+     cfghdr22                         44
+     BCFG_ExitAfterAlarmStops          4
+     cfgRadioBtn22                    64
+
+ 
+ 1 888 bytes in segment CONFIG_C
+ 
+ 1 888 bytes of CONST memory
+
+Errors: none
+Warnings: none

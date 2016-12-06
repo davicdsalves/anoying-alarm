@@ -1,0 +1,1285 @@
+//////////////////////////////////////////////////////////////////////////////
+//                                                                           /
+// IAR ARM ANSI C/C++ Compiler V4.42A/W32 EVALUATION   15/Feb/2011  11:37:23 /
+// Copyright 1999-2005 IAR Systems. All rights reserved.                     /
+//                                                                           /
+//    Cpu mode        =  interwork                                           /
+//    Endian          =  little                                              /
+//    Stack alignment =  4                                                   /
+//    Source file     =  D:\Phone\Elfs\Anoying Alarm\main.cpp                /
+//    Command line    =  "D:\Phone\Elfs\Anoying Alarm\main.cpp" -D NDEBUG    /
+//                       -D OLDFUNCTIONS -lCN "D:\Phone\Elfs\Anoying         /
+//                       Alarm\Release\List\" -la "D:\Phone\Elfs\Anoying     /
+//                       Alarm\Release\List\" -o "D:\Phone\Elfs\Anoying      /
+//                       Alarm\Release\Obj\" -s9 --no_unroll                 /
+//                       --no_code_motion --cpu_mode arm --endian little     /
+//                       --cpu ARM926EJ-S --stack_align 4 --interwork -e     /
+//                       --enable_multibytes --fpu None --eec++              /
+//                       --dlib_config "D:\Phone\IAR\Embedded Workbench 4.0  /
+//                       Evaluation\ARM\LIB\dl5tpainl8n.h" -I                /
+//                       "D:\Phone\IAR\Embedded Workbench 4.0                /
+//                       Evaluation\ARM\INC\" --inline_threshold=2           /
+//    List file       =  D:\Phone\Elfs\Anoying Alarm\Release\List\main.s79   /
+//                                                                           /
+//                                                                           /
+//////////////////////////////////////////////////////////////////////////////
+
+        NAME main
+
+        RTMODEL "StackAlign4", "USED"
+        RTMODEL "__cpu_mode", "__pcs__interwork"
+        RTMODEL "__data_model", "absolute"
+        RTMODEL "__endian", "little"
+        RTMODEL "__rt_version", "6"
+
+        RSEG CSTACK:DATA:NOROOT(2)
+
+        ERROR
+//NOTE: This module defines or uses C++ features that are not
+//      accessible from assembler code. Assembling this file will
+//      not produce an equivalent object file to the one produced
+//      by the C++ compiler.
+
+        PUBWEAK `?*?DATA_ID`
+        PUBLIC ??CreateQuestion
+        FUNCTION ??CreateQuestion,0203H
+        LOCFRAME CSTACK, 56, STACK
+        MULTWEAK ??CreateQuestion??rT
+??DataTable0 EQU 0
+??DataTable1 EQU 0
+??DataTable10 EQU 0
+??DataTable11 EQU 0
+??DataTable12 EQU 0
+??DataTable13 EQU 0
+??DataTable14 EQU 0
+??DataTable15 EQU 0
+??DataTable16 EQU 0
+??DataTable2 EQU 0
+??DataTable22 EQU 0
+??DataTable25 EQU 0
+??DataTable26 EQU 0
+??DataTable3 EQU 0
+??DataTable4 EQU 0
+??DataTable5 EQU 0
+??DataTable6 EQU 0
+??DataTable7 EQU 0
+??DataTable8 EQU 0
+??DataTable9 EQU 0
+        MULTWEAK ??InitConfig??rA
+        PUBLIC ??OnYes
+        FUNCTION ??OnYes,0603H
+        LOCFRAME CSTACK, 4, STACK
+        MULTWEAK ??OnYes??rT
+        PUBLIC ??Onno
+        FUNCTION ??Onno,0603H
+        LOCFRAME CSTACK, 4, STACK
+        MULTWEAK ??Onno??rT
+        FUNCTION ??ReconfigElf,0603H
+        LOCFRAME CSTACK, 12, STACK
+        PUBLIC ??ShowAuthorInfo
+        FUNCTION ??ShowAuthorInfo,0603H
+        LOCFRAME CSTACK, 20, STACK
+        MULTWEAK ??ShowAuthorInfo??rT
+        PUBLIC ??TerminateElf
+        FUNCTION ??TerminateElf,0603H
+        LOCFRAME CSTACK, 4, STACK
+        MULTWEAK ??TerminateElf??rT
+        PUBLIC ??elf_exit
+        FUNCTION ??elf_exit,0603H
+        LOCFRAME CSTACK, 4, STACK
+        MULTWEAK ??elf_exit??rT
+        PUBLIC ??isAlarmBook
+        FUNCTION ??isAlarmBook,0603H
+        LOCFRAME CSTACK, 4, STACK
+        MULTWEAK ??isAlarmBook??rT
+        MULTWEAK ??kill_data??rA
+        PUBLIC ??loopQuestion
+        FUNCTION ??loopQuestion,0203H
+        LOCFRAME CSTACK, 8, STACK
+        MULTWEAK ??loopQuestion??rT
+        MULTWEAK ??main??rT
+        PUBLIC ??myFind
+        FUNCTION ??myFind,0603H
+        LOCFRAME CSTACK, 4, STACK
+        MULTWEAK ??myFind??rT
+        PUBLIC ??onBcfgConfig
+        FUNCTION ??onBcfgConfig,0603H
+        LOCFRAME CSTACK, 552, STACK
+        MULTWEAK ??onBcfgConfig??rT
+        PUBLIC ??onCloseAABook
+        FUNCTION ??onCloseAABook,0603H
+        LOCFRAME CSTACK, 4, STACK
+        MULTWEAK ??onCloseAABook??rT
+        PUBLIC ??onTimer
+        FUNCTION ??onTimer,0603H
+        LOCFRAME CSTACK, 4, STACK
+        MULTWEAK ??onTimer??rT
+        MULTWEAK `??operator delete??rA`
+        MULTWEAK `??operator new??rA`
+        MULTWEAK `??operator new[]??rA`
+        PUBLIC ??verifyQuestion
+        FUNCTION ??verifyQuestion,0203H
+        LOCFRAME CSTACK, 20, STACK
+        MULTWEAK ??verifyQuestion??rT
+        PUBLIC ??wakeMsg
+        FUNCTION ??wakeMsg,0203H
+        LOCFRAME CSTACK, 28, STACK
+        MULTWEAK ??wakeMsg??rT
+        PUBWEAK ?init?tab?DATA_I
+        PUBLIC AABook
+        PUBLIC base_page
+        PUBLIC contador
+        PUBLIC main
+        FUNCTION main,0a03H
+        LOCFRAME CSTACK, 16, STACK
+        PUBLIC teste
+        PUBLIC timer
+        
+        CFI Names cfiNames0
+        CFI StackFrame CFA R13 HUGEDATA
+        CFI Resource R0:32, R1:32, R2:32, R3:32, R4:32, R5:32, R6:32, R7:32
+        CFI Resource R8:32, R9:32, R10:32, R11:32, R12:32, CPSR:32, R13:32
+        CFI Resource R14:32, SPSR:32
+        CFI VirtualResource ?RET:32
+        CFI EndNames cfiNames0
+        
+        CFI Common cfiCommon0 Using cfiNames0
+        CFI CodeAlign 2
+        CFI DataAlign 4
+        CFI ReturnAddress ?RET CODE
+        CFI CFA R13+0
+        CFI R0 Undefined
+        CFI R1 Undefined
+        CFI R2 Undefined
+        CFI R3 Undefined
+        CFI R4 SameValue
+        CFI R5 SameValue
+        CFI R6 SameValue
+        CFI R7 SameValue
+        CFI R8 SameValue
+        CFI R9 SameValue
+        CFI R10 SameValue
+        CFI R11 SameValue
+        CFI R12 Undefined
+        CFI CPSR SameValue
+        CFI R14 Undefined
+        CFI SPSR SameValue
+        CFI ?RET R14
+        CFI EndCommon cfiCommon0
+        
+        
+        CFI Common cfiCommon1 Using cfiNames0
+        CFI CodeAlign 4
+        CFI DataAlign 4
+        CFI ReturnAddress ?RET CODE
+        CFI CFA R13+0
+        CFI R0 Undefined
+        CFI R1 Undefined
+        CFI R2 Undefined
+        CFI R3 Undefined
+        CFI R4 SameValue
+        CFI R5 SameValue
+        CFI R6 SameValue
+        CFI R7 SameValue
+        CFI R8 SameValue
+        CFI R9 SameValue
+        CFI R10 SameValue
+        CFI R11 SameValue
+        CFI R12 Undefined
+        CFI CPSR SameValue
+        CFI R14 Undefined
+        CFI SPSR SameValue
+        CFI ?RET R14
+        CFI EndCommon cfiCommon1
+        
+
+
+
+
+kill_data           SYMBOL "kill_data"
+
+??CreateQuestion??rT SYMBOL "??rT", ??CreateQuestion
+??InitConfig??rA    SYMBOL "??rA", ??InitConfig
+
+??OnYes??rT         SYMBOL "??rT", ??OnYes
+
+??Onno??rT          SYMBOL "??rT", ??Onno
+
+??ShowAuthorInfo??rT SYMBOL "??rT", ??ShowAuthorInfo
+
+??TerminateElf??rT  SYMBOL "??rT", ??TerminateElf
+
+??elf_exit??rT      SYMBOL "??rT", ??elf_exit
+
+??isAlarmBook??rT   SYMBOL "??rT", ??isAlarmBook
+??kill_data??rA     SYMBOL "??rA", kill_data
+
+??loopQuestion??rT  SYMBOL "??rT", ??loopQuestion
+main                SYMBOL "main"
+??main??rT          SYMBOL "??rT", main
+
+??myFind??rT        SYMBOL "??rT", ??myFind
+
+??onBcfgConfig??rT  SYMBOL "??rT", ??onBcfgConfig
+
+??onCloseAABook??rT SYMBOL "??rT", ??onCloseAABook
+
+??onTimer??rT       SYMBOL "??rT", ??onTimer
+`??operator delete??rA` SYMBOL "??rA", `??operator delete`
+`??operator new??rA` SYMBOL "??rA", `??operator new`
+`??operator new[]??rA` SYMBOL "??rA", `??operator new[]`
+
+??verifyQuestion??rT SYMBOL "??rT", ??verifyQuestion
+
+??wakeMsg??rT       SYMBOL "??rT", ??wakeMsg
+
+        EXTERN ??InitConfig
+        FUNCTION ??InitConfig,0202H
+        EXTERN `??operator delete`
+        FUNCTION `??operator delete`,0202H
+        EXTERN `??operator new`
+        FUNCTION `??operator new`,0202H
+        EXTERN `??operator new[]`
+        FUNCTION `??operator new[]`,0202H
+        EXTERN BCFG_ExitAfterAlarmStops
+        EXTERN BCFG_QuestionFive_RightAnswer
+        EXTERN BCFG_QuestionFour_RightAnswer
+        EXTERN BCFG_QuestionMessages_QuestionFive
+        EXTERN BCFG_QuestionMessages_QuestionFour
+        EXTERN BCFG_QuestionMessages_QuestionOne
+        EXTERN BCFG_QuestionMessages_QuestionThree
+        EXTERN BCFG_QuestionMessages_QuestionTwo
+        EXTERN BCFG_QuestionOne_RightAnswer
+        EXTERN BCFG_QuestionThree_RightAnswer
+        EXTERN BCFG_QuestionTwo_RightAnswer
+        EXTERN ELF_BEGIN
+        EXTERN NUMBER_OF_QUESTIONS
+        EXTERN VAR_ARG_BOOK
+        EXTERN VAR_ARG_YESNO_NO_ACTION
+        EXTERN VAR_ARG_YESNO_PRE_QUESTION
+        EXTERN VAR_ARG_YESNO_QUESTION
+        EXTERN VAR_ARG_YESNO_YES_ACTION
+        EXTERN kill_data
+        FUNCTION kill_data,0202H
+        EXTERN successed_config_name
+        EXTERN successed_config_path
+
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock0 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??TerminateElf??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock0
+        REQUIRE ??TerminateElf
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock1 Using cfiCommon1
+        CFI Function ??TerminateElf
+        ARM
+??TerminateElf:
+        PUSH     {LR}
+        CFI ?RET Frame(CFA, -4)
+        CFI CFA R13+4
+        MOV      R0,R1
+        SWI      +303
+        MOV      R0,#+1
+        POP      {PC}             ;; return
+        CFI EndBlock cfiBlock1
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock2 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??onTimer??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock2
+        REQUIRE ??onTimer
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock3 Using cfiCommon1
+        CFI Function ??onTimer
+        ARM
+??onTimer:
+        LDR      R2,??DataTable30  ;; ??onTimer
+        LDR      R0,??DataTable28  ;; timer
+        PUSH     {LR}
+        CFI ?RET Frame(CFA, -4)
+        CFI CFA R13+4
+        MOV      R3,#+0
+        MOV      R1,#+1000
+        SWI      +296
+        LDR      R0,??DataTable21  ;; ??isAlarmBook
+        SWI      +304
+        CMP      R0,#+0
+        POPEQ    {PC}
+        LDR      R0,??DataTable28  ;; timer
+        SWI      +298
+        BL       ??CreateQuestion
+        POP      {PC}             ;; return
+        CFI EndBlock cfiBlock3
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock4 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??onBcfgConfig??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock4
+        REQUIRE ??onBcfgConfig
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock5 Using cfiCommon1
+        CFI Function ??onBcfgConfig
+        ARM
+??onBcfgConfig:
+        PUSH     {LR}
+        CFI ?RET Frame(CFA, -4)
+        CFI CFA R13+4
+        SUB      SP,SP,#+540
+        CFI CFA R13+544
+        MOV      R0,#+17
+        SWI      +261
+        LDR      R1,??onBcfgConfig_1  ;; `?<Constant L"\\x42\\x63\\x66\\x67\\x45\\x64\\x69\\x74\\` + 48
+        ADD      R2,SP,#+512
+        SWI      +284
+        CMP      R0,#+0
+        BNE      ??onBcfgConfig_2
+        MOV      R0,#+17
+??onBcfgConfig_3:
+        SWI      +261
+        MOV      R1,R0
+        MOV      R0,SP
+        SWI      +338
+        LDR      R1,??onBcfgConfig_1+0x4  ;; `?<Constant L"\\x42\\x63\\x66\\x67\\x45\\x64\\x69\\x74\\` + 76
+        MOV      R0,SP
+        SWI      +340
+        LDR      R0,??DataTable24  ;; successed_config_name
+        MOV      R3,#+0
+        LDR      R2,[R0, #+0]
+        LDR      R0,??DataTable23  ;; successed_config_path
+        LDR      R1,[R0, #+0]
+        MOV      R0,SP
+        SWI      +269
+        MOV      R0,#+1
+        ADD      SP,SP,#+540
+        CFI CFA R13+4
+        POP      {PC}             ;; return
+        CFI CFA R13+544
+??onBcfgConfig_2:
+        MOV      R0,#+16
+        SWI      +261
+        LDR      R1,??onBcfgConfig_1  ;; `?<Constant L"\\x42\\x63\\x66\\x67\\x45\\x64\\x69\\x74\\` + 48
+        ADD      R2,SP,#+512
+        SWI      +284
+        CMP      R0,#+0
+        MOVEQ    R0,#+16
+        BEQ      ??onBcfgConfig_3
+        LDR      R0,??onBcfgConfig_1+0x8  ;; `?<Constant L"\\x42\\x63\\x66\\x67\\x45\\x64\\x69\\x74\\`
+        MOV      R2,#+255
+        ORR      R2,R2,#0xFF00
+        MOV      R1,#+0
+        SWI      +349
+        MOV      R1,#+0
+        PUSH     {R1}
+        CFI CFA R13+548
+        MOV      R3,#+1
+        MOV      R2,#+0
+        MOV      R1,#+136
+        ORR      R1,R1,#0x1300
+        PUSH     {R1}
+        CFI CFA R13+552
+        MOV      R1,R0
+        MVN      R0,#-1879048192
+        SWI      +599
+        MOV      R0,#+1
+        ADD      SP,SP,#+8
+        CFI CFA R13+544
+        ADD      SP,SP,#+540
+        CFI CFA R13+4
+        POP      {PC}
+        DATA
+??onBcfgConfig_1:
+        DC32     `?<Constant L"\\x42\\x63\\x66\\x67\\x45\\x64\\x69\\x74\\` + 48
+        DC32     `?<Constant L"\\x42\\x63\\x66\\x67\\x45\\x64\\x69\\x74\\` + 76
+        DC32     `?<Constant L"\\x42\\x63\\x66\\x67\\x45\\x64\\x69\\x74\\`
+        CFI EndBlock cfiBlock5
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock6 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??ShowAuthorInfo??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock6
+        REQUIRE ??ShowAuthorInfo
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock7 Using cfiCommon1
+        CFI Function ??ShowAuthorInfo
+        ARM
+??ShowAuthorInfo:
+        PUSH     {R4,R5,LR}
+        CFI ?RET Frame(CFA, -4)
+        CFI R5 Frame(CFA, -8)
+        CFI R4 Frame(CFA, -12)
+        CFI CFA R13+12
+        MOV      R1,#+0
+        MOV      R4,R0
+        LDR      R0,??ShowAuthorInfo_1  ;; `?<Constant L"\\x41\\x6e\\x6e\\x6f\\x79\\x69\\x6e\\x67\\`
+        MOV      R5,#+255
+        ORR      R5,R5,#0xFF00
+        MOV      R2,R5
+        SWI      +349
+        LDR      R1,[R4, #+0]
+        MOV      R3,#+1
+        PUSH     {R1}
+        CFI CFA R13+16
+        MOV      R2,R5
+        MOV      R1,#+0
+        PUSH     {R1}
+        CFI CFA R13+20
+        MOV      R1,R0
+        MVN      R0,#-1879048192
+        SWI      +599
+        MOV      R0,#+1
+        POP      {R1,R2,R4,R5,PC}  ;; return
+        DATA
+??ShowAuthorInfo_1:
+        DC32     `?<Constant L"\\x41\\x6e\\x6e\\x6f\\x79\\x69\\x6e\\x67\\`
+        CFI EndBlock cfiBlock7
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock8 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??elf_exit??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock8
+        REQUIRE ??elf_exit
+
+        RSEG DYN_PAGE:CONST:SORT:NOROOT(2)
+HW_PageEvents:
+        DATA
+        DC32 997, ??TerminateElf, 998, ??ShowAuthorInfo, 996, ??ReconfigElf
+        DC32 994, ??onBcfgConfig, 64, 0H
+
+        RSEG DATA_I:DATA:SORT:NOROOT(2)
+// u16 __data timer
+timer:
+        DS8 2
+        REQUIRE `?<Initializer for timer>`
+        DS8 2
+// BOOK_ *__data AABook
+AABook:
+        DS8 4
+        REQUIRE `?<Initializer for AABook>`
+// GUI_type *__data teste
+teste:
+        DS8 4
+        REQUIRE `?<Initializer for teste>`
+// int __data contador
+contador:
+        DS8 4
+        REQUIRE `?<Initializer for contador>`
+base_page:
+        DS8 12
+        REQUIRE `?<Initializer for base_page>`
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock9 Using cfiCommon1
+        CFI Function ??elf_exit
+        ARM
+??elf_exit:
+        PUSH     {LR}
+        CFI ?RET Frame(CFA, -4)
+        CFI CFA R13+4
+        SWI      +33028
+        MOV      R1,R0
+        LDR      R0,??elf_exit_1  ;; ELF_BEGIN
+        POP      {LR}             ;; Pop
+        CFI ?RET R14
+        CFI CFA R13+0
+        _BF      kill_data,??kill_data??rA  ;; tailcall
+        DATA
+??elf_exit_1:
+        DC32     ELF_BEGIN
+        CFI EndBlock cfiBlock9
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock10 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??onCloseAABook??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock10
+        REQUIRE ??onCloseAABook
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock11 Using cfiCommon1
+        CFI Function ??onCloseAABook
+        ARM
+??onCloseAABook:
+        PUSH     {LR}
+        CFI ?RET Frame(CFA, -4)
+        CFI CFA R13+4
+        CMP      R0,#+0
+        POPEQ    {PC}
+        LDR      R0,??DataTable28  ;; timer
+        SWI      +298
+        LDR      R0,??DataTable27  ;; ??elf_exit
+        SWI      +264
+        POP      {PC}             ;; return
+        CFI EndBlock cfiBlock11
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock12 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??loopQuestion??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock12
+        REQUIRE ??loopQuestion
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock13 Using cfiCommon1
+        CFI Function ??loopQuestion
+        ARM
+??loopQuestion:
+        PUSH     {R4,LR}
+        CFI ?RET Frame(CFA, -4)
+        CFI R4 Frame(CFA, -8)
+        CFI CFA R13+8
+        LDR      R4,??DataTable28  ;; timer
+        LDR      R0,[R4, #+8]
+        SWI      +462
+        LDR      R1,??DataTable20  ;; NUMBER_OF_QUESTIONS
+        LDR      R0,[R4, #+12]
+        LDR      R1,[R1, #+0]
+        CMP      R0,R1
+        BNE      ??loopQuestion_1
+        LDR      R0,??loopQuestion_2  ;; BCFG_ExitAfterAlarmStops
+        LDR      R0,[R0, #+0]
+        CMP      R0,#+0
+        BNE      ??loopQuestion_3
+        LDR      R0,??loopQuestion_2+0x4  ;; timer + 4
+        LDR      R0,[R0, #+0]
+        SWI      +303
+        POP      {R4,PC}
+??loopQuestion_3:
+        LDR      R1,??DataTable30  ;; ??onTimer
+        MOV      R0,#+0
+        STR      R0,[R4, #+12]
+        MOV      R2,#+0
+        MOV      R0,#+32
+        ORR      R0,R0,#0x4E00
+        SWI      +297
+        STRH     R0,[R4, #+0]
+        POP      {R4,PC}
+??loopQuestion_1:
+        BL       ??CreateQuestion
+        POP      {R4,PC}          ;; return
+        DATA
+??loopQuestion_2:
+        DC32     BCFG_ExitAfterAlarmStops
+        DC32     timer + 4
+        CFI EndBlock cfiBlock13
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock14 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??verifyQuestion??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock14
+        REQUIRE ??verifyQuestion
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock15 Using cfiCommon1
+        CFI Function ??verifyQuestion
+        ARM
+??verifyQuestion:
+        LDR      R3,??verifyQuestion_1  ;; BCFG_QuestionFive_RightAnswer
+        SUB      SP,SP,#+20
+        CFI CFA R13+20
+        LDR      R3,[R3, #+0]
+        MOV      R2,SP
+        STR      R3,[SP, #+0]
+        LDR      R3,??verifyQuestion_1+0x4  ;; BCFG_QuestionOne_RightAnswer
+        LDR      R3,[R3, #+0]
+        STR      R3,[SP, #+4]
+        LDR      R3,??verifyQuestion_1+0x8  ;; BCFG_QuestionTwo_RightAnswer
+        LDR      R3,[R3, #+0]
+        STR      R3,[SP, #+8]
+        LDR      R3,??verifyQuestion_1+0xC  ;; BCFG_QuestionThree_RightAnswer
+        LDR      R3,[R3, #+0]
+        STR      R3,[SP, #+12]
+        LDR      R3,??verifyQuestion_1+0x10  ;; BCFG_QuestionFour_RightAnswer
+        LDR      R3,[R3, #+0]
+        STR      R3,[SP, #+16]
+        LDR      R0,[R2, +R0, LSL #+2]
+        ADD      SP,SP,#+20
+        CFI CFA R13+0
+        CMP      R1,R0
+        MOVEQ    R0,#+1
+        MOVNE    R0,#+0
+        BX       LR               ;; return
+        DATA
+??verifyQuestion_1:
+        DC32     BCFG_QuestionFive_RightAnswer
+        DC32     BCFG_QuestionOne_RightAnswer
+        DC32     BCFG_QuestionTwo_RightAnswer
+        DC32     BCFG_QuestionThree_RightAnswer
+        DC32     BCFG_QuestionFour_RightAnswer
+        CFI EndBlock cfiBlock15
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock16 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??Onno??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock16
+        REQUIRE ??Onno
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock17 Using cfiCommon1
+        CFI Function ??Onno
+        ARM
+??Onno:
+        LDR      R0,??DataTable18  ;; timer + 12
+        LDR      R2,??DataTable17  ;; 0x66666667
+        PUSH     {LR}
+        CFI ?RET Frame(CFA, -4)
+        CFI CFA R13+4
+        LDR      R0,[R0, #+0]
+        MOV      R1,#+1
+        SMULL    R3,R12,R0,R2
+        MOV      R3,#+5
+        ASR      R12,R12,#+1
+        ADD      R12,R12,R0, LSR #+31
+        MUL      R12,R3,R12
+        SUB      R0,R0,R12
+        BL       ??verifyQuestion
+        CMP      R0,#+0
+        BNE      ??Onno_1
+        LDR      R0,??DataTable19  ;; timer
+        LDR      R1,[R0, #+12]
+        SUB      R1,R1,#+1
+        STR      R1,[R0, #+12]
+??Onno_1:
+        POP      {LR}             ;; Pop
+        CFI ?RET R14
+        CFI CFA R13+0
+        B        ??loopQuestion   ;; tailcall
+        CFI EndBlock cfiBlock17
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock18 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??OnYes??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock18
+        REQUIRE ??OnYes
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock19 Using cfiCommon1
+        CFI Function ??OnYes
+        ARM
+??OnYes:
+        LDR      R0,??DataTable18  ;; timer + 12
+        LDR      R2,??DataTable17  ;; 0x66666667
+        PUSH     {LR}
+        CFI ?RET Frame(CFA, -4)
+        CFI CFA R13+4
+        LDR      R0,[R0, #+0]
+        MOV      R1,#+0
+        SMULL    R3,R12,R0,R2
+        MOV      R3,#+5
+        ASR      R12,R12,#+1
+        ADD      R12,R12,R0, LSR #+31
+        MUL      R12,R3,R12
+        SUB      R0,R0,R12
+        BL       ??verifyQuestion
+        CMP      R0,#+0
+        BNE      ??OnYes_1
+        LDR      R0,??DataTable19  ;; timer
+        LDR      R1,[R0, #+12]
+        SUB      R1,R1,#+1
+        STR      R1,[R0, #+12]
+??OnYes_1:
+        POP      {LR}             ;; Pop
+        CFI ?RET R14
+        CFI CFA R13+0
+        B        ??loopQuestion   ;; tailcall
+        CFI EndBlock cfiBlock19
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock20 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??wakeMsg??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock20
+        REQUIRE ??wakeMsg
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock21 Using cfiCommon1
+        CFI Function ??wakeMsg
+        ARM
+??wakeMsg:
+        LDR      R1,??wakeMsg_1   ;; `?<Constant {BCFG_QuestionMessages_QuestionFive`
+        PUSH     {R4,R5}
+        CFI R5 Frame(CFA, -4)
+        CFI R4 Frame(CFA, -8)
+        CFI CFA R13+8
+        SUB      SP,SP,#+20
+        CFI CFA R13+28
+        LDM      R1,{R2-R5,R12}
+        LDR      R1,??DataTable17  ;; 0x66666667
+        MOV      R0,SP
+        STM      R0,{R2-R5,R12}
+        LDR      R0,??DataTable18  ;; timer + 12
+        LDR      R0,[R0, #+0]
+        SMULL    R2,R3,R0,R1
+        MOV      R2,#+5
+        ASR      R3,R3,#+1
+        ADD      R3,R3,R0, LSR #+31
+        MUL      R3,R2,R3
+        MOV      R1,SP
+        SUB      R0,R0,R3
+        LDR      R0,[R1, +R0, LSL #+2]
+        ADD      SP,SP,#+20
+        CFI CFA R13+8
+        POP      {R4,R5}
+        CFI R4 SameValue
+        CFI R5 SameValue
+        CFI CFA R13+0
+        BX       LR               ;; return
+        DATA
+??wakeMsg_1:
+        DC32     `?<Constant {BCFG_QuestionMessages_QuestionFive`
+        CFI EndBlock cfiBlock21
+
+        RSEG CODE:CODE:NOROOT(2)
+        DATA
+??DataTable17:
+        DC32     0x66666667
+
+        RSEG CODE:CODE:NOROOT(2)
+        DATA
+??DataTable18:
+        DC32     timer + 12
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock22 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??CreateQuestion??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock22
+        REQUIRE ??CreateQuestion
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock23 Using cfiCommon1
+        CFI Function ??CreateQuestion
+        ARM
+??CreateQuestion:
+        PUSH     {R4-R7,LR}
+        CFI ?RET Frame(CFA, -4)
+        CFI R7 Frame(CFA, -8)
+        CFI R6 Frame(CFA, -12)
+        CFI R5 Frame(CFA, -16)
+        CFI R4 Frame(CFA, -20)
+        CFI CFA R13+20
+        LDR      R4,??DataTable19  ;; timer
+        LDR      R0,[R4, #+12]
+        ADD      R0,R0,#+1
+        STR      R0,[R4, #+12]
+        BL       ??wakeMsg
+        MOV      R6,R0
+        MOV      R0,#+42
+        _BLF     `??operator new[]`,`??operator new[]??rA`
+        LDR      R2,??CreateQuestion_1  ;; `?<Constant L"\\x51\\x75\\x65\\x73\\x74\\x69\\x6f\\x6e\\`
+        MOV      R5,R0
+        LDR      R0,??DataTable20  ;; NUMBER_OF_QUESTIONS
+        MOV      R1,#+15
+        LDR      R0,[R0, #+0]
+        PUSH     {R0}
+        CFI CFA R13+24
+        LDR      R3,[R4, #+12]
+        MOV      R0,R5
+        SWI      +277
+        MOV      R2,#+41
+        MOV      R1,#+0
+        MOV      R0,R6
+        SWI      +349
+        MOV      R6,R0
+        MOV      R2,#+15
+        MOV      R1,#+0
+        MOV      R0,R5
+        SWI      +349
+        MOV      R7,R0
+        LDR      R0,??DataTable21  ;; ??isAlarmBook
+        SWI      +304
+        LDR      R3,??CreateQuestion_1+0x4  ;; VAR_ARG_YESNO_PRE_QUESTION
+        MOV      R1,#+0
+        PUSH     {R1}
+        CFI CFA R13+28
+        LDR      R1,??CreateQuestion_1+0x8  ;; ??Onno
+        MOV      R2,R0
+        PUSH     {R1}
+        CFI CFA R13+32
+        LDR      R1,??CreateQuestion_1+0xC  ;; VAR_ARG_YESNO_NO_ACTION
+        MOV      R0,#+0
+        PUSH     {R1}
+        CFI CFA R13+36
+        LDR      R1,??CreateQuestion_1+0x10  ;; ??OnYes
+        PUSH     {R1}
+        CFI CFA R13+40
+        LDR      R1,??CreateQuestion_1+0x14  ;; VAR_ARG_YESNO_YES_ACTION
+        PUSH     {R1}
+        CFI CFA R13+44
+        LDR      R1,??CreateQuestion_1+0x18  ;; VAR_ARG_YESNO_QUESTION
+        PUSH     {R7}
+        CFI CFA R13+48
+        PUSH     {R1}
+        CFI CFA R13+52
+        LDR      R1,??CreateQuestion_1+0x1C  ;; VAR_ARG_BOOK
+        PUSH     {R6}
+        CFI CFA R13+56
+        SWI      +677
+        ADD      SP,SP,#+36
+        CFI CFA R13+20
+        STR      R0,[R4, #+8]
+        SWI      +308
+        MOV      R0,R5
+        _BLF     `??operator delete`,`??operator delete??rA`
+        POP      {R4-R7,PC}       ;; return
+        DATA
+??CreateQuestion_1:
+        DC32     `?<Constant L"\\x51\\x75\\x65\\x73\\x74\\x69\\x6f\\x6e\\`
+        DC32     VAR_ARG_YESNO_PRE_QUESTION
+        DC32     ??Onno
+        DC32     VAR_ARG_YESNO_NO_ACTION
+        DC32     ??OnYes
+        DC32     VAR_ARG_YESNO_YES_ACTION
+        DC32     VAR_ARG_YESNO_QUESTION
+        DC32     VAR_ARG_BOOK
+        CFI EndBlock cfiBlock23
+
+        RSEG CODE:CODE:NOROOT(2)
+        DATA
+??DataTable19:
+        DC32     timer
+
+        RSEG CODE:CODE:NOROOT(2)
+        DATA
+??DataTable20:
+        DC32     NUMBER_OF_QUESTIONS
+
+        RSEG CODE:CODE:NOROOT(2)
+        DATA
+??DataTable21:
+        DC32     ??isAlarmBook
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock24 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??isAlarmBook??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock24
+        REQUIRE ??isAlarmBook
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock25 Using cfiCommon1
+        CFI Function ??isAlarmBook
+        ARM
+??isAlarmBook:
+        LDR      R1,??isAlarmBook_1  ;; `?<Constant "AlarmBook">`
+        PUSH     {LR}
+        CFI ?RET Frame(CFA, -4)
+        CFI CFA R13+4
+        LDR      R0,[R0, #+0]
+        LDR      R0,[R0, #+4]
+        SWI      +345
+        CMP      R0,#+0
+        MOVEQ    R0,#+1
+        POPEQ    {PC}
+        MOV      R0,#+0
+        POP      {PC}             ;; return
+        DATA
+??isAlarmBook_1:
+        DC32     `?<Constant "AlarmBook">`
+        CFI EndBlock cfiBlock25
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock26 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??myFind??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock26
+        REQUIRE ??myFind
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock27 Using cfiCommon1
+        CFI Function ??myFind
+        ARM
+??myFind:
+        LDR      R1,??DataTable29  ;; `?<Constant "Annoying Alarm">`
+        PUSH     {LR}
+        CFI ?RET Frame(CFA, -4)
+        CFI CFA R13+4
+        LDR      R0,[R0, #+0]
+        LDR      R0,[R0, #+4]
+        SWI      +345
+        CMP      R0,#+0
+        MOVEQ    R0,#+1
+        POPEQ    {PC}
+        MOV      R0,#+0
+        POP      {PC}             ;; return
+        CFI EndBlock cfiBlock27
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock28 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??ReconfigElf??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock28
+        REQUIRE ??ReconfigElf
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock29 Using cfiCommon1
+        CFI Function ??ReconfigElf
+        ARM
+??ReconfigElf:
+        PUSH     {R4,R5,LR}
+        CFI ?RET Frame(CFA, -4)
+        CFI R5 Frame(CFA, -8)
+        CFI R4 Frame(CFA, -12)
+        CFI CFA R13+12
+        MOV      R4,R0
+        LDR      R0,??DataTable23  ;; successed_config_path
+        MOV      R5,#+0
+        LDR      R1,[R0, #+0]
+        MOV      R0,R4
+        SWI      +671
+        CMP      R0,#+0
+        BNE      ??ReconfigElf_1
+        LDR      R0,??DataTable24  ;; successed_config_name
+        LDR      R1,[R0, #+0]
+        ADD      R0,R4,#+128
+        SWI      +671
+        CMP      R0,#+0
+        BNE      ??ReconfigElf_1
+        _BLF     ??InitConfig,??InitConfig??rA
+        LDR      R2,??DataTable30  ;; ??onTimer
+        LDR      R0,??DataTable28  ;; timer
+        MOV      R3,#+0
+        MOV      R1,#+1000
+        SWI      +296
+        MOV      R5,#+1
+??ReconfigElf_1:
+        MOV      R0,R5
+        POP      {R4,R5,PC}       ;; return
+        CFI EndBlock cfiBlock29
+
+        RSEG CODE:CODE:NOROOT(2)
+        DATA
+??DataTable23:
+        DC32     successed_config_path
+
+        RSEG CODE:CODE:NOROOT(2)
+        DATA
+??DataTable24:
+        DC32     successed_config_name
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock30 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??main??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock30
+        REQUIRE main
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock31 Using cfiCommon1
+        CFI Function main
+        ARM
+main:
+        LDR      R0,??main_0      ;; ??myFind
+        PUSH     {R4,LR}
+        CFI ?RET Frame(CFA, -4)
+        CFI R4 Frame(CFA, -8)
+        CFI CFA R13+8
+        SWI      +304
+        CMP      R0,#+0
+        BEQ      ??main_1
+        LDR      R0,??main_0+0x4  ;; `?<Constant "Annoying Alarm">` + 16
+        MOV      R4,#+255
+        ORR      R4,R4,#0xFF00
+        MOV      R2,R4
+        MOV      R1,#+0
+        SWI      +349
+        MOV      R1,#+0
+        PUSH     {R1}
+        CFI CFA R13+12
+        PUSH     {R1}
+        CFI CFA R13+16
+        MOV      R3,#+1
+        MOV      R2,R4
+        MOV      R1,R0
+        MVN      R0,#-1879048192
+        SWI      +599
+        LDR      R0,??DataTable27  ;; ??elf_exit
+        SWI      +264
+        ADD      SP,SP,#+8
+        CFI CFA R13+8
+        MOV      R0,#+0
+        POP      {R4,PC}
+??main_1:
+        LDR      R4,??DataTable28  ;; timer
+        _BLF     ??InitConfig,??InitConfig??rA
+        MOV      R0,#+24
+        _BLF     `??operator new`,`??operator new??rA`
+        LDR      R3,??DataTable29  ;; `?<Constant "Annoying Alarm">`
+        LDR      R1,??main_0+0x8  ;; ??onCloseAABook
+        STR      R0,[R4, #+4]
+        MOV      R0,#+0
+        PUSH     {R0}
+        CFI CFA R13+12
+        ADD      R2,R4,#+16
+        MVN      R0,R0
+        PUSH     {R0}
+        CFI CFA R13+16
+        LDR      R0,[R4, #+4]
+        SWI      +299
+        LDR      R1,??DataTable30  ;; ??onTimer
+        MOV      R2,#+0
+        MOV      R0,#+1000
+        SWI      +297
+        STRH     R0,[R4, #+0]
+        ADD      SP,SP,#+8
+        CFI CFA R13+8
+        MOV      R0,#+0
+        POP      {R4,PC}          ;; return
+        DATA
+??main_0:
+        DC32     ??myFind
+        DC32     `?<Constant "Annoying Alarm">` + 16
+        DC32     ??onCloseAABook
+        CFI EndBlock cfiBlock31
+
+        RSEG CODE:CODE:NOROOT(2)
+        DATA
+??DataTable27:
+        DC32     ??elf_exit
+
+        RSEG CODE:CODE:NOROOT(2)
+        DATA
+??DataTable28:
+        DC32     timer
+
+        RSEG CODE:CODE:NOROOT(2)
+        DATA
+??DataTable29:
+        DC32     `?<Constant "Annoying Alarm">`
+
+        RSEG CODE:CODE:NOROOT(2)
+        DATA
+??DataTable30:
+        DC32     ??onTimer
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock32 Using cfiCommon1
+        CFI NoFunction
+        ARM
+??kill_data??rA:
+        LDR      R12,??Subroutine16_0  ;; kill_data
+        BX       R12
+        DATA
+??Subroutine16_0:
+        DC32     kill_data
+        CFI EndBlock cfiBlock32
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock33 Using cfiCommon1
+        CFI NoFunction
+        ARM
+`??operator new[]??rA`:
+        LDR      R12,??Subroutine17_0  ;; `??operator new[]`
+        BX       R12
+        DATA
+??Subroutine17_0:
+        DC32     `??operator new[]`
+        CFI EndBlock cfiBlock33
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock34 Using cfiCommon1
+        CFI NoFunction
+        ARM
+`??operator delete??rA`:
+        LDR      R12,??Subroutine18_0  ;; `??operator delete`
+        BX       R12
+        DATA
+??Subroutine18_0:
+        DC32     `??operator delete`
+        CFI EndBlock cfiBlock34
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock35 Using cfiCommon1
+        CFI NoFunction
+        ARM
+??InitConfig??rA:
+        LDR      R12,??Subroutine19_0  ;; ??InitConfig
+        BX       R12
+        DATA
+??Subroutine19_0:
+        DC32     ??InitConfig
+        CFI EndBlock cfiBlock35
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock36 Using cfiCommon1
+        CFI NoFunction
+        ARM
+`??operator new??rA`:
+        LDR      R12,??Subroutine20_0  ;; `??operator new`
+        BX       R12
+        DATA
+??Subroutine20_0:
+        DC32     `??operator new`
+        CFI EndBlock cfiBlock36
+
+        RSEG DATA_ID:CONST:SORT:NOROOT(2)
+`?<Initializer for timer>`:
+        DATA
+        DC8 0, 0
+        DC8 0, 0
+`?<Initializer for AABook>`:
+        DC8 0, 0, 0, 0
+`?<Initializer for teste>`:
+        DC8 0, 0, 0, 0
+`?<Initializer for contador>`:
+        DC8 0, 0, 0, 0
+`?<Initializer for base_page>`:
+        DC32 `?<Constant "AnnoyingAlarm_BasePage">`, 0H, HW_PageEvents
+
+        RSEG DATA_ID:CONST:SORT:NOROOT(2)
+`?*?DATA_ID`:
+
+        RSEG INITTAB:CODE:ROOT(2)
+        DATA
+?init?tab?DATA_I:
+        DCD      sfe(DATA_I) - sfb(DATA_I), sfb(DATA_I), sfb(DATA_ID)
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant "AnnoyingAlarm_BasePage">`:
+        DATA
+        DC8 "AnnoyingAlarm_BasePage"
+        DC8 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x42\\x63\\x66\\x67\\x45\\x64\\x69\\x74\\`:
+        DATA
+        DC8 42H, 0, 63H, 0, 66H, 0, 67H, 0
+        DC8 45H, 0, 64H, 0, 69H, 0, 74H, 0
+        DC8 2EH, 0, 65H, 0, 6CH, 0, 66H, 0
+        DC8 20H, 0, 6EH, 0, 6FH, 0, 74H, 0
+        DC8 20H, 0, 66H, 0, 6FH, 0, 75H, 0
+        DC8 6EH, 0, 64H, 0, 21H, 0, 0, 0
+        DC8 42H, 0, 63H, 0, 66H, 0, 67H, 0
+        DC8 45H, 0, 64H, 0, 69H, 0, 74H, 0
+        DC8 2EH, 0, 65H, 0, 6CH, 0, 66H, 0
+        DC8 0, 0
+        DC8 0, 0
+        DC8 2FH, 0, 42H, 0, 63H, 0, 66H, 0
+        DC8 67H, 0, 45H, 0, 64H, 0, 69H, 0
+        DC8 74H, 0, 2EH, 0, 65H, 0, 6CH, 0
+        DC8 66H, 0, 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x41\\x6e\\x6e\\x6f\\x79\\x69\\x6e\\x67\\`:
+        DATA
+        DC8 41H, 0, 6EH, 0, 6EH, 0, 6FH, 0
+        DC8 79H, 0, 69H, 0, 6EH, 0, 67H, 0
+        DC8 20H, 0, 41H, 0, 6CH, 0, 61H, 0
+        DC8 72H, 0, 6DH, 0, 20H, 0, 76H, 0
+        DC8 30H, 0, 2EH, 0, 33H, 0, 62H, 0
+        DC8 0AH, 0, 62H, 0, 79H, 0, 20H, 0
+        DC8 74H, 0, 52H, 0, 61H, 0, 44H, 0
+        DC8 75H, 0, 5AH, 0, 0, 0
+        DC8 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant {BCFG_QuestionMessages_QuestionFive`:
+        DATA
+        DC32 BCFG_QuestionMessages_QuestionFive
+        DC32 BCFG_QuestionMessages_QuestionOne
+        DC32 BCFG_QuestionMessages_QuestionTwo
+        DC32 BCFG_QuestionMessages_QuestionThree
+        DC32 BCFG_QuestionMessages_QuestionFour
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x51\\x75\\x65\\x73\\x74\\x69\\x6f\\x6e\\`:
+        DATA
+        DC8 51H, 0, 75H, 0, 65H, 0, 73H, 0
+        DC8 74H, 0, 69H, 0, 6FH, 0, 6EH, 0
+        DC8 3AH, 0, 20H, 0, 25H, 0, 64H, 0
+        DC8 2FH, 0, 25H, 0, 64H, 0, 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant "AlarmBook">`:
+        DATA
+        DC8 "AlarmBook"
+        DC8 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant "Annoying Alarm">`:
+        DATA
+        DC8 "Annoying Alarm"
+        DC8 0
+        DC8 41H, 0, 6EH, 0, 6EH, 0, 6FH, 0
+        DC8 79H, 0, 69H, 0, 6EH, 0, 67H, 0
+        DC8 20H, 0, 41H, 0, 6CH, 0, 61H, 0
+        DC8 72H, 0, 6DH, 0, 20H, 0, 69H, 0
+        DC8 73H, 0, 20H, 0, 72H, 0, 75H, 0
+        DC8 6EH, 0, 69H, 0, 6EH, 0, 67H, 0
+        DC8 21H, 0, 0, 0
+
+        END
+// 
+// 1 716 bytes in segment CODE
+//   324 bytes in segment DATA_C
+//    28 bytes in segment DATA_I
+//    28 bytes in segment DATA_ID
+//    40 bytes in segment DYN_PAGE
+//    12 bytes in segment INITTAB
+// 
+// 1 592 bytes of CODE  memory (+ 136 bytes shared)
+//   392 bytes of CONST memory
+//    28 bytes of DATA  memory
+//
+//Errors: none
+//Warnings: none

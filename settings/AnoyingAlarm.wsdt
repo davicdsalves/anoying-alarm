@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<Workspace>
+  <ConfigDictionary>
+    
+  <CurrentConfigs><Project>AnoyingAlarm/Release</Project></CurrentConfigs></ConfigDictionary>
+  <Desktop>
+    <Static>
+      <Workspace>
+        <ColumnWidths>
+          
+          
+          
+          
+        <Column0>196</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
+      </Workspace>
+      <Build>
+        
+        
+        
+        
+      <ColumnWidth0>20</ColumnWidth0><ColumnWidth1>819</ColumnWidth1><ColumnWidth2>218</ColumnWidth2><ColumnWidth3>54</ColumnWidth3></Build>
+    </Static>
+    <Windows>
+      
+      
+    <Wnd2>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-18065-2362</Identity>
+            <TabName>Workspace</TabName>
+            <Factory>Workspace</Factory>
+            <Session>
+              
+            <NodeDict><ExpandedNode>AnoyingAlarm</ExpandedNode><ExpandedNode>AnoyingAlarm/main.cpp</ExpandedNode></NodeDict></Session>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd2><Wnd3>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-24108-2453</Identity>
+            <TabName>Build</TabName>
+            <Factory>Build</Factory>
+            <Session/>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd3></Windows>
+    <Editor>
+      
+      
+      
+      
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>D:\Phone\Elfs\Anoying Alarm\main.cpp</Filename><XPos>0</XPos><YPos>84</YPos><SelStart>2631</SelStart><SelEnd>2631</SelEnd></Tab><ActiveTab>0</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>D:\Phone\Elfs\Anoying Alarm\config_data.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>335</SelStart><SelEnd>335</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>D:\Phone\Elfs\Anoying Alarm\config_data.c</Filename><XPos>0</XPos><YPos>33</YPos><SelStart>3551</SelStart><SelEnd>3551</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>D:\Phone\Elfs\Anoying Alarm\functions.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>526</SelStart><SelEnd>526</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>D:\Phone\Elfs\Anoying Alarm\vars.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>85</SelStart><SelEnd>85</SelEnd></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Positions>
+      
+      
+      
+      
+      
+    <Top><Row0><Sizes><Toolbar-01892b48><key>iaridepm.enu1</key></Toolbar-01892b48></Sizes></Row0></Top><Left><Row0><Sizes><Wnd2><Rect><Top>-2</Top><Left>-2</Left><Bottom>742</Bottom><Right>270</Right><x>-2</x><y>-2</y><xscreen>164</xscreen><yscreen>169</yscreen><sizeHorzCX>128125</sizeHorzCX><sizeHorzCY>177149</sizeHorzCY><sizeVertCX>212500</sizeVertCX><sizeVertCY>779874</sizeVertCY></Rect></Wnd2></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd3><Rect><Top>-2</Top><Left>-2</Left><Bottom>167</Bottom><Right>1282</Right><x>-2</x><y>-2</y><xscreen>1284</xscreen><yscreen>169</yscreen><sizeHorzCX>1003125</sizeHorzCX><sizeHorzCY>177149</sizeHorzCY><sizeVertCX>128125</sizeVertCX><sizeVertCY>177149</sizeVertCY></Rect></Wnd3></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+  </Desktop>
+</Workspace>
+
+

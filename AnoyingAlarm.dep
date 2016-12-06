@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<project>
+  <fileVersion>2</fileVersion>
+  <fileChecksum>2310619854</fileChecksum>
+  <configuration>
+    <name>Debug</name>
+    <outputs>
+      <file>$PROJ_DIR$\..\C++\_cpp2.cpp</file>
+      <file>$PROJ_DIR$\config_data.c</file>
+      <file>$PROJ_DIR$\conf_loader.cpp</file>
+      <file>$PROJ_DIR$\..\include\func.asm</file>
+      <file>$PROJ_DIR$\Debug\Exe\AnoyingAlarm.elf</file>
+      <file>$PROJ_DIR$\main.cpp</file>
+      <file>$PROJ_DIR$\..\include\DYN_ext.h</file>
+      <file>$PROJ_DIR$\..\include\dir.h</file>
+      <file>$PROJ_DIR$\functions.h</file>
+      <file>$PROJ_DIR$\..\include\Lib_Clara.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\_cpp2.pbi</file>
+      <file>$PROJ_DIR$\..\include\Types.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\config_data.r79</file>
+      <file>$PROJ_DIR$\Debug\Obj\func.r79</file>
+      <file>$PROJ_DIR$\..\include\DYN_tag.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\_cpp2.r79</file>
+      <file>$PROJ_DIR$\conf_loader.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.r79</file>
+      <file>$PROJ_DIR$\..\include\Colors.h</file>
+      <file>$PROJ_DIR$\..\include\cfg_items.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\conf_loader.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\conf_loader.r79</file>
+      <file>$PROJ_DIR$\Debug\Obj\BcfgExample.pbd</file>
+      <file>$PROJ_DIR$\Debug\Exe\BcfgExample.elf</file>
+      <file>$PROJ_DIR$\..\include\var_arg.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\config_data.pbi</file>
+      <file>$PROJ_DIR$\vars.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.pbi</file>
+      <file>$PROJ_DIR$\..\include\obsolete.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\AnoyingAlarm.pbd</file>
+      <file>$PROJ_DIR$\config_data.h</file>
+    </outputs>
+    <file>
+      <name>$PROJ_DIR$\..\C++\_cpp2.cpp</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 15</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 10</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 9 11 6 14 18 28</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\config_data.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 12</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 25</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 19 11 30</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\conf_loader.cpp</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 21</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 20</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 9 11 6 14 18 28 7 19 16</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\include\func.asm</name>
+      <outputs>
+        <tool>
+          <name>AARM</name>
+          <file> 13</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\main.cpp</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 17</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 27</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 9 11 6 14 18 28 7 24 19 16 30 26 8</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Debug\Obj\BcfgExample.pbd</name>
+      <inputs>
+        <tool>
+          <name>BILINK</name>
+          <file> 10 20 25 27</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>[ROOT_NODE]</name>
+      <outputs>
+        <tool>
+          <name>XLINK</name>
+          <file> 23 4</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Debug\Obj\AnoyingAlarm.pbd</name>
+      <inputs>
+        <tool>
+          <name>BILINK</name>
+          <file> 10 20 25 27</file>
+        </tool>
+      </inputs>
+    </file>
+    <forcedrebuild>
+      <name>[MULTI_TOOL]</name>
+      <tool>XLINK</tool>
+    </forcedrebuild>
+  </configuration>
+  <configuration>
+    <name>Release</name>
+    <outputs>
+      <file>$PROJ_DIR$\..\C++\_cpp2.cpp</file>
+      <file>$PROJ_DIR$\config_data.c</file>
+      <file>$PROJ_DIR$\conf_loader.cpp</file>
+      <file>$PROJ_DIR$\..\include\func.asm</file>
+      <file>$PROJ_DIR$\main.cpp</file>
+      <file>$PROJ_DIR$\..\include\DYN_ext.h</file>
+      <file>$PROJ_DIR$\..\include\dir.h</file>
+      <file>$PROJ_DIR$\functions.h</file>
+      <file>$PROJ_DIR$\..\include\Lib_Clara.h</file>
+      <file>$PROJ_DIR$\..\include\Types.h</file>
+      <file>$PROJ_DIR$\..\include\DYN_tag.h</file>
+      <file>$PROJ_DIR$\conf_loader.h</file>
+      <file>$PROJ_DIR$\..\include\Colors.h</file>
+      <file>$PROJ_DIR$\..\include\cfg_items.h</file>
+      <file>$PROJ_DIR$\..\include\var_arg.h</file>
+      <file>$PROJ_DIR$\vars.h</file>
+      <file>$PROJ_DIR$\..\include\obsolete.h</file>
+      <file>$PROJ_DIR$\config_data.h</file>
+      <file>$TOOLKIT_DIR$\lib\dl5tpainl8n.r79</file>
+      <file>$PROJ_DIR$\Release\Obj\main.pbi</file>
+      <file>$PROJ_DIR$\Release\List\main.s79</file>
+      <file>$PROJ_DIR$\..\include\1.xcl</file>
+      <file>$PROJ_DIR$\Release\Obj\conf_loader.r79</file>
+      <file>$PROJ_DIR$\Release\Obj\func.r79</file>
+      <file>$PROJ_DIR$\Release\Obj\config_data.r79</file>
+      <file>$PROJ_DIR$\Release\Obj\config_data.pbi</file>
+      <file>$PROJ_DIR$\Release\List\_cpp2.s79</file>
+      <file>$PROJ_DIR$\Release\Obj\main.r79</file>
+      <file>$PROJ_DIR$\Release\Obj\conf_loader.pbi</file>
+      <file>$PROJ_DIR$\Release\Obj\_cpp2.pbi</file>
+      <file>$PROJ_DIR$\Release\Obj\AnoyingAlarm.pbd</file>
+      <file>$PROJ_DIR$\Release\List\main.lst</file>
+      <file>$PROJ_DIR$\..\include\DYN_mac.asm</file>
+      <file>$PROJ_DIR$\Release\Obj\_cpp2.r79</file>
+      <file>$PROJ_DIR$\Release\Exe\AnoyingAlarm.elf</file>
+      <file>$PROJ_DIR$\Release\List\_cpp2.lst</file>
+      <file>$PROJ_DIR$\Release\List\conf_loader.lst</file>
+      <file>$PROJ_DIR$\Release\List\config_data.lst</file>
+      <file>$PROJ_DIR$\Release\List\conf_loader.s79</file>
+      <file>$PROJ_DIR$\Release\List\config_data.s79</file>
+      <file>$PROJ_DIR$\Release\List\AnoyingAlarm.map</file>
+      <file>D:\Phone\Elfs\Anoying Alarm\main.cpp</file>
+    </outputs>
+    <file>
+      <name>$PROJ_DIR$\..\C++\_cpp2.cpp</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 33 26 35</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 29</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 8 9 5 10 12 16</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\config_data.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 24 39 37</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 25</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 13 9 17</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 17</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\conf_loader.cpp</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 22 38 36</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 28</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 8 9 5 10 12 16 6 13 11</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 11</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\include\func.asm</name>
+      <outputs>
+        <tool>
+          <name>AARM</name>
+          <file> 23</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>AARM</name>
+          <file> 10 32</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\main.cpp</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 27 20 31</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 19</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 8 9 5 10 12 16 6 14 13 11 17 15 7</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 11 17 15 7</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>[ROOT_NODE]</name>
+      <outputs>
+        <tool>
+          <name>XLINK</name>
+          <file> 34 40</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Release\Obj\AnoyingAlarm.pbd</name>
+      <inputs>
+        <tool>
+          <name>BILINK</name>
+          <file> 29 28 25 19</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Release\Exe\AnoyingAlarm.elf</name>
+      <outputs>
+        <tool>
+          <name>XLINK</name>
+          <file> 40</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>XLINK</name>
+          <file> 21 33 22 24 23 27 18</file>
+        </tool>
+      </inputs>
+    </file>
+  </configuration>
+</project>
+
+
